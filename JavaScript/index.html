@@ -5,13 +5,14 @@
    <style>
     body{background:#00FFFF;font-family:Helvetica;}
     ul#list1 li{display:inline;}
+    a{list-style-type:none;}
    </style>
   </head>
   <body>
    <div id="divBody"></div>
    <noscript>Please Enable JavaScript</noscript>
    <script type="text/javascript">
-    var lang = "<div align='center'>";lang += "<ul id='list1'>";lang += "<li><a href='javascript:en'><font color='#FFFFFF'>English</font></a></li>";lang += "</ul>";lang += "</div>";
+    var lang = "<div align='center'>";lang += "<ul id='list1'>";lang += "<font size='12'>";lang += "<li><a href='javascript:en'><font color='#FFFFFF'>English</font></a></li>";lang += "</font>";lang += "</ul>";lang += "</div>";
     document.getElementById("divBody").innerHTML = lang;
    </script>
   </body>

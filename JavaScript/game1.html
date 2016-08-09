@@ -27,8 +27,11 @@
     var plane1 = new THREE.Mesh( pla3,grass );
    </script>
    <script type="text/javascript">
+    scene.add(plane1);
+   </script>
+   <script type="text/javascript">
     addThree();movement();
-    camera.position.z = 5;scene.add(plane1);
+    camera.position.z = 5;renderer.render(scene, camera);
     function forward(){}
     function turnL(){}
     function backward(){}

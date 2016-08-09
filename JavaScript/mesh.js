@@ -5,6 +5,9 @@ var pla1 = new THREE.PlaneGeometry( 5,5 );var pla2 = new THREE.PlaneGeometry( 10
 
 var black = new THREE.MeshBasicMaterial({ color: 0x000000 });
 var blue = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+var grass = new THREE.MeshBasicMaterial({ color: 0x00aa00 });
 var lime = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 var red = new THREE.MeshBasicMaterial({ color: 0xff0000 });
 var white = new THREE.MeshBasicMaterial({ color 0xffffff });
+
+var plane1 = new THREE.Mesh( pla3,grass );

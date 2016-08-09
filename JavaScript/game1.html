@@ -37,10 +37,18 @@
    <script type="text/javascript">
     addThree();movement();
     camera.position.z = 5;
-    function forward(){}
-    function turnL(){}
-    function backward(){}
-    function turnR(){}
+    function forward(){
+     document.getElementById("scriptRender").innerHTML -= "render();";
+    }
+    function turnL(){
+     document.getElementById("scriptRender").innerHTML -= "render();";
+    }
+    function backward(){
+     document.getElementById("scriptRender").innerHTML -= "render();";
+    }
+    function turnR(){
+     document.getElementById("scriptRender").innerHTML -= "render();";
+    }
    </script>
   </body>
  </html>

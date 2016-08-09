@@ -26,12 +26,17 @@
 
     var plane1 = new THREE.Mesh( pla3,grass );
    </script>
-   <script type="text/javascript">
+   <script id="scriptRender" type="text/javascript">
     scene.add(plane1);
+    function render(){
+     requestAnimationFrame( render );
+     renderer.render( scene, camera );
+    }
+    render();
    </script>
    <script type="text/javascript">
     addThree();movement();
-    camera.position.z = 5;renderer.render(scene, camera);
+    camera.position.z = 5;
     function forward(){}
     function turnL(){}
     function backward(){}

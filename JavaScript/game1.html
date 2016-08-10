@@ -1,7 +1,7 @@
 <!DOCTYPE html>
  <html>
   <head>
-   <title>JavaScript | Game1</title>
+   <title>JavaScript | MeshExample</title>
    <style>
     body{ margin:0; }
     canvas{ width:100%;height:100%; }
@@ -15,34 +15,12 @@
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
-    camera.position.z = 5;
-   </script>
-   <script type="text/javascript" name="colors">
-    var black = new THREE.MeshBasicMaterial({ color: 0x000000 });
-    var blue = new THREE.MeshBasicMaterial({ color: 0x0000ff });
-    var pine = new THREE.MeshBasicMaterial({ color: 0x00aa11 });
-    var lime = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    var brown = new THREE.MeshBasicMaterial({ color: 0xaa5500 });
-    var red = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-    var white = new THREE.MeshBasicMaterial({ color: 0xffffff });
-   </script>
-   <script type="text/javascript" name="shapes">
-    var box1 = new THREE.BoxGeometry( 1,1,1 );var box2 = new THREE.BoxGeometry( 2,2,2 );var box3 = new THREE.BoxGeometry( 3,3,3 );
-    var sphere1 = new THREE.SphereGeometry( 5,32,32 );var sphere2 = new THREE.SphereGeometry( 10,32,32 );var sphere3 = new THREE.SphereGeometry( 15,32,32 );
-    var cone1 = new THREE.ConeGeometry( 5,10,64 );var cone2 = new THREE.ConeGeometry( 10,15,64 );var cone3 = new THREE.ConeGeometry( 15,20,64 );
-    var octa1 = new THREE.OctahedronGeometry( 5,0 );var octa2 = new THREE.OctahedronGeometry( 10,0 );var octa3 = new THREE.OctahedronGeometry( 15,0 );
-    var cylinder1 = new THREE.CylinderGeometry( 1,1,10,64 );var clyinder2 = new THREE.CylinderGeometry( 5,5,15,64 );var cylinder3 = new THREE.CylinderGeometry( 10,10,20,64 );
-    var tree1Part1 = new THREE.Mesh( cylinder1,brown );var tree1Part2 = new THREE.Mesh( cone1,pine );scene.add(treePart1);
-   </script>
-   <script type="text/javascript" name="movement">
-    function begin(key){
-     var x = key.keyCode;
-    }
+    camera.position.z = 5;var box = new THREE.BoxGeometry( 1,1,1 );var color = new THREE.MeshBasicMaterial({ color: 0x00ff00 });var cube = new THREE.Mesh( box, color );
+    scene.add( cube );
     function render(){
      requestAnimationFrame( render );
      renderer.render( scene, camera );
     }
     render();
-   </script>
   </body>
  </html>

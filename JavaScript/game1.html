@@ -15,6 +15,7 @@
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
+    camera.position.z = 5;
    </script>
    <script type="text/javascript" name="colors">
     var black = new THREE.MeshBasicMaterial({ color: 0x000000 });
@@ -41,6 +42,8 @@
      }
     }
     function render(){
+     requestAnimationFrame( render );
+     renderer.render( scene, camera );
     }
    </script>
   </body>

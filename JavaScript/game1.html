@@ -19,6 +19,7 @@
    <script type="text/javascript" name="colors">
     var black = new THREE.MeshBasicMaterial({ color: 0x000000 });
     var blue = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+    var pine = new THREE.MeshBasicMaterial({ color: 0x00aa11 });
     var lime = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
     var brown = new THREE.MeshBasicMaterial({ color: 0xaa5500 });
     var red = new THREE.MeshBasicMaterial({ color: 0xff0000 });
@@ -30,7 +31,7 @@
     var cone1 = new THREE.ConeGeometry( 5,10,64 );var cone2 = new THREE.ConeGeometry( 10,15,64 );var cone3 = new THREE.ConeGeometry( 15,20,64 );
     var octa1 = new THREE.OctahedronGeometry( 5,0 );var octa2 = new THREE.OctahedronGeometry( 10,0 );var octa3 = new THREE.OctahedronGeometry( 15,0 );
     var cylinder1 = new THREE.CylinderGeometry( 1,1,10,64 );var clyinder2 = new THREE.CylinderGeometry( 5,5,15,64 );var cylinder3 = new THREE.CylinderGeometry( 10,10,20,64 );
-    var tree1Part1 = new THREE.Mesh( cylinder1,)
+    var tree1Part1 = new THREE.Mesh( cylinder1,brown );var tree1Part2 = new THREE.Mesh( cone1,pine );scene.add(treePart1);
    </script>
    <script type="text/javascript" name="movement">
     function begin(key){
@@ -40,6 +41,7 @@
      }
     }
     function render(){
+    }
    </script>
   </body>
  </html>

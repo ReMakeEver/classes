@@ -37,14 +37,12 @@
    <script type="text/javascript" name="movement">
     function begin(key){
      var x = key.keyCode;
-     if(x=="13"){
-      render();
-     }
     }
     function render(){
      requestAnimationFrame( render );
      renderer.render( scene, camera );
     }
+    render();
    </script>
   </body>
  </html>

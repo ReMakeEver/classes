@@ -25,11 +25,10 @@
     var land1 = new THREE.Mesh( land, grass );
     var fence1 = new THREE.Mesh( wall, brown );
     
-    var wallWire = new THREE.WireframeHelper( fence, 0x000000 );
+    var wallWire = new THREE.WireframeHelper( fence1, 0x000000 );
     
     scene.add(land1);scene.add(fence1);
-    
-    land1.rotation.x = -70;
+    land1.rotation.x=-70;
     
     var mode = "start";
     

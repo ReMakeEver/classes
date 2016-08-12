@@ -30,9 +30,9 @@
     scene.add(land1);scene.add(fence1);
     
     var mode = "start";
-    var land1Rx = land1.rotation.x;var land1Ry = land1.rotation.y;var land2Rz = land1.rotation.z;
+    var land1R = land1.rotation;var land1P = land1.position;
     
-    land1Rx = -70;
+    land1Rx.x = -70;
     function startMove(){
      mode = "move";
     }

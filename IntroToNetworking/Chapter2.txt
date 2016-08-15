@@ -1,0 +1,21 @@
+trussell@d49.org
+Case Projects
+
+Case 2-1:
+	You have been hired to upgrade a network of 50 computers currently connected to 10 Mbps hubs.
+	This long-overdue upgrade is necessary because of poor network response time.
+	Caused by multiple collisions occurring during long file transfers between clients, and servers.
+	What interconnecting devices might you use to fix this problem?
+
+Case 2-2:
+	Two-hundred workstations, and four servers on a single LAN connected by a number of switches.
+	There is an excessive number of broadcast packages throuhout the LAN.
+	What should be done to decrease the broadcast traffic?
+
+Case 2-3:
+	Physical vs. Logical topology.
+	Bus topology.
+	Star topology.
+	Ring topology.
+	Ethernet and CSMA/CD.
+	

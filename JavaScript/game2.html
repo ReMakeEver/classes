@@ -23,13 +23,13 @@
     var sky = new THREE.MeshBasicMaterial({ color: 0x00ffff });
     
     var landPiece1 = new THREE.Mesh( land, grass );
-    var skyPiece1 = new THREE.Mesh( land, sky );var skyPiece2 = new THREE.Mesh( land, sky );
+    var skyPiece1 = new THREE.Mesh( land, sky );var skyPiece2 = new THREE.Mesh( land, sky );var skyPiece3 = new THREE.Mesh( land, sky );var skyPiece4 = Three.Mesh( land, sky );
     
     scene.add( skyPiece1 );scene.add( skyPiece2 );
     
     camera.position.x=0;camera.position.y=0;camera.position.z=20;
-    skyPiece1.position.x=-60;skyPiece1.position.y=0;skyPiece1.position.z=-10;
-    skyPiece2.position.x=-30;skyPiece2.position.y=0;skyPiece2.position.z=-10;
+    skyPiece1.position.x=-60;skyPiece1.position.y=30;skyPiece1.position.z=-10;
+    skyPiece2.position.x=-30;skyPiece2.position.y=30;skyPiece2.position.z=-10;
     
     camera.rotation.x=0;camera.rotation.y=0;camera.rotation.z=0;
     skyPiece1.rotation.x=0;skyPiece1.rotation.y=0;skyPiece1.rotation.z=0;

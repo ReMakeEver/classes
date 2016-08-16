@@ -7,7 +7,7 @@
     canvas{ background:#00FFFF;width:100%;height:100%; }
    </style>
   </head>
-  <body>
+  <body onkeydown="setKey()";>
    <script src="three.js"></script>
    <script type="text/javascript">
     var scene = new THREE.Scene();
@@ -15,6 +15,22 @@
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild(renderer);
+    var key = "none";var log;
+    
+    var grass = new THREE.MeshBasicMaterial({ color: 0x00aa00 });
+    
+    var land1 = new THREE.PlaneGeometry( 30,30,1 );
+    
+    var landPiece1 = new THREE.Mesh( land1, grass );
+    
+    scene.add(landPiece1);
+    
+    function render(){
+     if(key=="none"){
+      requestAnimationFrame( render );
+      renderer.render( scene, camera );
+     }
+    }
    </script>
   </body>
  </html>

@@ -17,15 +17,15 @@
     document.body.appendChild(renderer.domElement);
     var key = "none";var log;var x;
     
-    var grass = new THREE.MeshBasicMaterial({ color: 0x00aa00 });
-    
     var land = new THREE.PlaneGeometry( 30,30,1 );
     
     var landPiece1 = new THREE.Mesh( plane, grass );
     
+    var grass = new THREE.MeshBasicMaterial({ color: 0x00aa00 });
+    
     scene.add( landPiece1 );
     
-    camera.position.z=5;
+    camera.position.z = 5;
     
     function setKey(event){
      x = event.keyCode;
@@ -35,11 +35,11 @@
      }
     }
     function render(){
-     if(key=="none"){
+     if(key==="none"){
       requestAnimationFrame( render );
       renderer.render( scene, camera );
      }
-     if(key=="w"){
+     if(key==="w"){
       requestAnimationFrame( render );
       camera.position.z -= 1;
       renderer.render( scene, camera );

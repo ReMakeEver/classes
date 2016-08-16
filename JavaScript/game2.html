@@ -25,9 +25,10 @@
     
     scene.add(landPiece1);
     
-    function setKey(x){
-     var i = x.keyCode;
+    function setKey(event){
+     var i = event.keyCode;
      key = i;
+     log += i;
     }
     function render(){
      if(key=="none"){

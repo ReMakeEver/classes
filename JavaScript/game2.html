@@ -35,15 +35,8 @@
      }
     }
     function render(){
-     if(key==="none"){
-      requestAnimationFrame( render );
-      renderer.render( scene, camera );
-     }
-     if(key==="w"){
-      requestAnimationFrame( render );
-      camera.position.z -= 1;
-      renderer.render( scene, camera );
-     }
+     requestAnimationFrame( render );
+     renderer.render( scene, camera );
     }
     render();
    </script>

@@ -15,7 +15,7 @@ scene.add( landPiece1 );scene.add( landPiece2 );scene.add( landPiece3 );scene.ad
 // Camera Position:
 camera.position.x=0;
 camera.position.y=0;
-camera.position.z=0;
+camera.position.z=5;
 // Land Position:
 landPiece1.position.x=0;landPiece2.position.x=0;landPiece3.position.x=0;landPiece4.position.x=0;
 landPiece1.position.y=0;landPiece2.position.y=0;landPiece3.position.y=0;landPiece4.position.y=0;

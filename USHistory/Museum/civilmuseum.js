@@ -81,7 +81,7 @@ var applyPhysics = (function(){
     raycaster.ray.orgin.y += birdsEye;
     var hits = raycaster.insertObject( platform );
     motion.airborne = true;
-    if( ( hits.length > 0 ) && hits[0].face.normal.y > 0 ) ){
+    if( ( hits.length > 0 ) && ( hits[0].face.normal.y > 0 ) ){
      var actualHeight = hits[0].distance - birdsEye;
      if( ( motion.velocity.y <= 0 ) && ( Math.abs( acutalHeight ) < kneeDeep ) ){
       motion.position.y -= actualHeight;

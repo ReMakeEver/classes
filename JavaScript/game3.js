@@ -28,7 +28,7 @@ scene.add( makeSkybox([
  ], 8000));
 
 var start = function( gameViewportSize ){
- var resize = funciton(){
+ var resize = function(){
   var viewport = gameViewportSize();
   renderer.setSize( viewport.width, viewport.height );
   camera.aspect = viewport.width / viewport.height;

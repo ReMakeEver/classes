@@ -133,7 +133,7 @@ var start = function( gameLoop, gameViewportSize ){
   var viewport = gameViewportSize();
   renderer.setSize( viewport.width, viewport.height );
   camera.aspect = viewport.width / viewport.height;
-  camera.updateProjectMatrix();
+  camera.updateProjectionMatrix();
  };
  window.addEventListener( 'resize', resize, false );
  resize();

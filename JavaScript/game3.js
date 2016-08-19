@@ -47,5 +47,5 @@ var start = function( gameViewportSize ){
 var gameViewportSize = function(){ return{
  width: window.innerWidth, height: window.innerHeight
 }};
-document.getElementById("containter").appendChild( renderer.domElement );
+document.getElementById("container").appendChild( renderer.domElement );
 start( gameViewportSize );

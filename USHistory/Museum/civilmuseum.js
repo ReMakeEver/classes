@@ -119,7 +119,7 @@ renderer.setPixelRatio( window.devicePixelRatio );
 var camera = new THREE.PerspectiveCamera( 60, 1, 0.1, 9000 );
 var scene = new THREE.Scene();
 scene.add( camera );
-scene.add( makeSkyBox([
+scene.add( makeSkybox([
  'textures/sky/px.jpg',
  'textures/sky/nx.jpg',
  'textures/sky/py.jpg',

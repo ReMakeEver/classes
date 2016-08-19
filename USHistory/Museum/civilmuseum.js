@@ -19,7 +19,7 @@ var keyboardControls = (function(){
    return function( e ){
     var index = watchedKeycodes.indexOf( e.keyCode );
     if( index >= 0 ){
-     keysPressed[ watchedKeyCodes[index] ] = down; e.preventDefault();
+     keysPressed[ watchedKeycodes[index] ] = down; e.preventDefault();
     }
    };
   };

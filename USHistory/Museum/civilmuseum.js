@@ -49,7 +49,7 @@ var keyboardControls = (function(){
 })();
 var applyPhysics = (function(){
  var timeStep = 5;
- var timeLeft = timeSet + 1;
+ var timeLeft = timeStep + 1;
  var birdsEye = 100;
  var kneeDeep = 0.4;
  var raycaster = new THREE.Raycaster();

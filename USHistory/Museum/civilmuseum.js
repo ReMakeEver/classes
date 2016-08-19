@@ -107,7 +107,7 @@ function makeSkybox( urls, size ){
  skyboxShader.uniforms['tCube'].value = skyboxCubemap;
  return new THREE.Mesh(
   new THREE.BoxGeometry( size, size, size ),
-  new THREE.ShadeMaterial({
+  new THREE.ShaderMaterial({
    fragmentShader: skyboxShader.fragmentShader, vertexShader: skyboxShader.vertexShader,
    uniforms: skyboxShader.uniforms, depthWrite: false, side: THREE.BackSide
   })

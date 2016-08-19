@@ -128,24 +128,6 @@ scene.add( makeSkybox([
  'textures/sky/nz.jpg'
  ], 8000 ));
 
-var start = function( gameLoop, gameViewportSize ){
- var resize = function(){
-  var viewport = gameViewportSize();
-  renderer.setSize( viewport.width, viewport.height );
-  camera.aspect = viewport.width / viewport.height;
-  camera.updateProjectionMatrix();
- };
- window.addEventListener( 'resize', resize, false );
- resize();
- var lastTimeStamp;
- var render = function( timeStamp ){
-  var timeElapsed = lastTimeStamp ? timeStamp - lastTimeStamp: 0; lastTimeStamp = timeStamp;
-  gameLoop( timeElapsed );
-  renderer.render( scene, camera );
-  requestAnimationFrame( render );
- };
- requestAnimationFrame( render );
-};
 var gameLoop = function( dt ){
  resetPlayer();
  keyboardControls();
@@ -156,4 +138,9 @@ var gameViewportSize = function(){
  return{ width: window.innerWidth, height: window.innerHeight }
 };
 document.getElementById("container").appendChild( renderer.domElement );
-start( gameLoop, gameViewportSize);
+function render(){
+ requestAnimationFrame( render );
+ renderer.render( scene, camera );
+}
+render();
+

@@ -1,8 +1,7 @@
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+var camera = new THREE.PerspectiveCamera( 60, 1, 0.1, 1000 );
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
 
 function makeSkybox( urls, size ){
  var skyboxCubemap = new THREE.CubeTextureLoader().load( urls );
@@ -28,8 +27,25 @@ scene.add( makeSkybox([
  'textures/sky/nz.jpg'
  ], 8000));
 
-function render(){
+var start = function( gameViewportSize ){
+ var resize = funciton(){
+  var viewport = gameViewportSize();
+  renderer.setSize( viewport.width, viewport.height );
+  camera.aspect = viewport.width / viewport.height;
+  camera.updateProjectionMatrix();
+ };
+ window.addEventListener( 'resize', resize, false );
+ resize();
+ var lastTimeStamp;
+ var render = function( timeStamp ){
+  var timeElapsed = lastTimeStamp ? timeStamp - lastTimeStamp : 0; lastTimeStamp = timeStamp;
+  renderer.render( scene, camera );
+  requestAnimationFrame( render );
+ };
  requestAnimationFrame( render );
- renderer.render( scene, camera );
-}
-render();
+};
+var gameViewportSize = function(){ return{
+ width: window.innerWidth, height: window.innerHeight
+}};
+document.getElementById("containter").appendChild( renderer.domElement );
+start( gameViewportSize );

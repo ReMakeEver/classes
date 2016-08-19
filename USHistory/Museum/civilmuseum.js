@@ -1,17 +1,3 @@
-var renderer = new THREE.WebGLRenderer({ antialias : true });
-renderer.setPixelRatio( window.devicePixelRatio );
-var camera = new THREE.PerspectiveCamera( 60, 1, 0.1, 9000 );
-var scene = new THREE.Scene();
-scene.add( camera );
-scene.add( makeSkyBox([
- 'textures/sky/px.jpg',
- 'textures/sky/nx.jpg',
- 'textures/sky/py.jpg',
- 'textures/sky/ny.jpg',
- 'textures/sky/pz.jpg',
- 'textures/sky/nz.jpg'
- ], 8000 ));
-
 var motion = {
  airborne: false,
  position: new THREE.Vector3(), velocity: new THREE.Vector3(),
@@ -127,6 +113,20 @@ function makeSkybox( urls, size ){
   })
  );
 }
+
+var renderer = new THREE.WebGLRenderer({ antialias : true });
+renderer.setPixelRatio( window.devicePixelRatio );
+var camera = new THREE.PerspectiveCamera( 60, 1, 0.1, 9000 );
+var scene = new THREE.Scene();
+scene.add( camera );
+scene.add( makeSkyBox([
+ 'textures/sky/px.jpg',
+ 'textures/sky/nx.jpg',
+ 'textures/sky/py.jpg',
+ 'textures/sky/ny.jpg',
+ 'textures/sky/pz.jpg',
+ 'textures/sky/nz.jpg'
+ ], 8000 ));
 
 var start = function( gameLoop, gameViewportSize ){
  var resize = function(){

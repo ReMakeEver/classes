@@ -156,4 +156,4 @@ var gameViewportSize = function(){
  return{ width: window.innerWidth, height: window.innerHeight }
 };
 document.getElementById("container").appendChild( renderer.domElement );
-start( gameLoop, gameViewportSize)
+start( gameLoop, gameViewportSize);

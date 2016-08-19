@@ -17,7 +17,7 @@ var keyboardControls = (function(){
  (function( watchedKeycodes ) {
   var handler = function( down ){
    return function( e ){
-    var index = watchedKeyCodes.indexOf( e.keyCode );
+    var index = watchedKeycodes.indexOf( e.keyCode );
     if( index >= 0 ){
      keysPressed[ watchedKeyCodes[index] ] = down; e.preventDefault();
     }

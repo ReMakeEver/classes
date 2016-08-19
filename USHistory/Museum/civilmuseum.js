@@ -95,7 +95,7 @@ var updateCamera = (function(){
   euler.x = motion.rotation.x;
   euler.y = motion.rotation.y;
   camera.quaternion.setFromEuler( euler );
-  camera.postion.copy( motion.potion );
+  camera.position.copy( motion.position );
   camera.position.y += 3.0;
  }
 })();

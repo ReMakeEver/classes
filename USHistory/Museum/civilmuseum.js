@@ -28,7 +28,7 @@ var resetPlayer = function(){
 var keyboardControls = (function(){
  var keys = { W : 87, A : 65, S : 83, D : 68, UP : 38, LT : 37, DN : 40, RT : 39 };
  var keysPressed = {};
- (funciton( watchedKeycodes ) {
+ (function( watchedKeycodes ) {
   var handler = function( down ){
    return function( e ){
     var index = watchedKeyCodes.indexOf( e.keyCode );

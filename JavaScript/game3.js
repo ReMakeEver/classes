@@ -1,37 +1,34 @@
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
-var renderer = new THREE.WebGLRenderer();renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
-var key = "none";
+var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize( window.innerWidth, window.innerHeight );
 
-var grass = new THREE.MeshBasicMaterial({ color: 0x00aa00 });
+function makeSkybox( urls, size ){
+ var skyboxCubemap = new THREE.CubeTextureLoader().load( urls );
+ skyboxCubemap.format = THREE.RGBFormat;
+ var skyboxShader = THREE.ShaderLib['cube'];
+ skyboxShader.uniforms['tCube'].value = skyboxCubemap;
+ return new THREE.Mesh(
+  new THREE.BoxGeometry( size, size, size ),
+  new THREE.ShaderMaterial({
+   fragmentShader : skyboxShader.fragmentShader, vertexShader: skyboxShader.vertexShader
+   uniforms: skyboxShader.uniforms, depthWrite: false, side: THREE.BackSide
+  })
+ );
+}
 
-var plane = new THREE.PlaneGeometry( 30,30,1 );
-
-var landPiece1 = new THREE.Mesh( plane, grass );var landPiece2 = new THREE.Mesh( plane, grass );var landPiece3 = new THREE.Mesh( plane, grass ); var landPiece4 = new THREE.Mesh( plane, grass );
-
-scene.add( landPiece1 );scene.add( landPiece2 );scene.add( landPiece3 );scene.add( landPiece4 );
-
-// Camera Position:
-camera.position.x=0;
-camera.position.y=0;
-camera.position.z=5;
-// Land Position:
-landPiece1.position.x=0;landPiece2.position.x=0;landPiece3.position.x=0;landPiece4.position.x=0;
-landPiece1.position.y=0;landPiece2.position.y=0;landPiece3.position.y=0;landPiece4.position.y=0;
-landPiece1.position.z=0;landPiece2.position.z=0;landPiece3.position.z=0;landPiece4.position.z=0;
-
-// Camera Rotation:
-camera.rotation.x=0;
-// Land Rotation:
-landPiece1.rotation.x=0;landPiece2.rotation.x=0;landPiece3.rotation.x=0;landPiece4.rotation.x=0;
-landPiece1.rotation.y=0;landPiece2.rotation.y=0;landPiece3.rotation.y=0;landPiece4.rotation.y=0;
-landPiece1.rotation.z=0;landPiece2.rotation.z=0;landPiece3.rotation.z=0;landPiece4.rotation.z=0;
+scene.add( camera );
+scene.add( makeSkybox([
+ 'textures/sky/px.jpg',
+ 'textures/sky/nx.jpg',
+ 'textures/sky/py.jpg',
+ 'textures/sky/ny.jpg',
+ 'textures/sky/pz.jpg',
+ 'textures/sky/nz.jpg'
+ ], 8000));
 
 function render(){
- if(key==="none"){
-  requestAnimationFrame( render );
-  renderer.render( scene, camera );
- }
+ requestAnimationFrame( render );
+ renderer.render( scene, camera );
 }
-render();
+}

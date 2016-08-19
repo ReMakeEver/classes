@@ -11,7 +11,7 @@ function makeSkybox( urls, size ){
  return new THREE.Mesh(
   new THREE.BoxGeometry( size, size, size ),
   new THREE.ShaderMaterial({
-   fragmentShader : skyboxShader.fragmentShader, vertexShader : skyboxShader.vertexShader
+   fragmentShader : skyboxShader.fragmentShader, vertexShader : skyboxShader.vertexShader,
    uniforms : skyboxShader.uniforms, depthWrite : false, side : THREE.BackSide
   })
  );

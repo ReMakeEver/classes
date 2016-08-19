@@ -14,8 +14,8 @@ scene.add( makeSkyBox([
 
 var motion = {
  airborne: false,
- position: new THREE.Vector3(), velocity: new THREE.Vector3();
- rotation: new THREE.Vector2(), spinning: new THREE.Vector2();
+ position: new THREE.Vector3(), velocity: new THREE.Vector3(),
+ rotation: new THREE.Vector2(), spinning: new THREE.Vector2()
 }
 motion.position.y = -150;
 

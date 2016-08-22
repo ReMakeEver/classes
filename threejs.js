@@ -17,7 +17,7 @@ camera.position.z = 5;
 var render = function(){
  requestAnimationFrame( render );
  cube.rotation.x += 0.1;
- cube.rotation.y = THREE.Math.degToRad(45);
+ cube.rotation.y += THREE.Math.degToRad(45);
  renderer.render( scene, camera );
 };
 render();

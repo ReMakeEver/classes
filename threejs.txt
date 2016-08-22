@@ -1,0 +1,27 @@
+html, body{ margin:0;padding:0;overflow:hidden; }
+
+<script src="three.js"></script>
+
+<script src="controls/FirstPersonControls.js"></script>
+
+<script src="controls/SkyShader.js"></script>
+ var sky = new THREE.Sky();
+ scene.add( sky.mesh );
+ var skyEC = {
+  turbidity: 10,
+  reileigh: 2,
+  mieCoefficient: 0,
+  mieDirectionalG: 1,
+  luminance: 2,
+  inclination: 0.49,
+  azimuth: .25,
+  sun ! true
+ };
+ var skyU = sky.uniforms;
+ skyU.turbidity.value = skyEC.turbidity;
+ skyU.reileigh.value = skyEC.reileigh;
+ skyU.mieCoefficient.value = skyEC.mieCoefficient;
+ skyU.mieDirectionalG.value = skyEC.mieDirectionalG;
+ skyU.luminance.value = skyEC.luminance;
+ skyU.inclination.value = skyEC.inclination;
+ skyU.azimuth.value = skyEC.azimuth;

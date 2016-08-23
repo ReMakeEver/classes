@@ -1,51 +1,12 @@
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 60, 1, 0.1, 1000 );
-var renderer = new THREE.WebGLRenderer({ antialias : true });
-renderer.setPixelRatio( window.devicePixelRatio );
+var aspect = window.innerWidth / window.innerHeight;
+var camera = new THREE.PerspectiveCamera( 75, aspect, 0.1, 1000 );
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize( renderer.domElement );
+document.body.appendChild( renderer.domElement );
 
-function makeSkybox( urls, size ){
- var skyboxCubemap = new THREE.CubeTextureLoader().load( urls );
- skyboxCubemap.format = THREE.RGBFormat;
- var skyboxShader = THREE.ShaderLib['cube'];
- skyboxShader.uniforms['tCube'].value = skyboxCubemap;
- return new THREE.Mesh(
-  new THREE.BoxGeometry( size, size, size ),
-  new THREE.ShaderMaterial({
-   fragmentShader : skyboxShader.fragmentShader, vertexShader : skyboxShader.vertexShader,
-   uniforms : skyboxShader.uniforms, depthWrite : false, side : THREE.BackSide
-  })
- );
-}
-
-scene.add( camera );
-scene.add( makeSkybox([
- 'textures/sky/px.jpg',
- 'textures/sky/nx.jpg',
- 'textures/sky/py.jpg',
- 'textures/sky/ny.jpg',
- 'textures/sky/pz.jpg',
- 'textures/sky/nz.jpg'
- ], 8000));
-
-var start = function( gameViewportSize ){
- var resize = function(){
-  var viewport = gameViewportSize();
-  renderer.setSize( viewport.width, viewport.height );
-  camera.aspect = viewport.width / viewport.height;
-  camera.updateProjectionMatrix();
- };
- window.addEventListener( 'resize', resize, false );
- resize();
- var lastTimeStamp;
- var render = function( timeStamp ){
-  var timeElapsed = lastTimeStamp ? timeStamp - lastTimeStamp : 0; lastTimeStamp = timeStamp;
-  renderer.render( scene, camera );
-  requestAnimationFrame( render );
- };
+var render = function(){
  requestAnimationFrame( render );
+ renderer.render( scene, camera );
 };
-var gameViewportSize = function(){ return{
- width: window.innerWidth, height: window.innerHeight
-}};
-document.getElementById("container").appendChild( renderer.domElement );
-start( gameViewportSize );
+render();

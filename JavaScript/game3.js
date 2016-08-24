@@ -6,12 +6,31 @@ renderer.setSize( renderer.domElement );
 document.body.appendChild( renderer.domElement );
 
 var sky = new THREE.Sky();
-scene.add( sky.mesh );
-var sUni = sky.uniforms;
-sUni.turbidity.value = 20;sUni.reileigh.value = 2;sUni.mieCoefficient.value = .005;sUni.mieDeirectionalG = .8;sUni.luminance.value = 1;sUni.inclination.value=0.49;sUni.azimuth.value = .25;
+
+function createSky(){
+ scene.add( sky.mesh );
+ var eC = {
+  turbidity: 20,
+  reileigh: 2,
+  mieCoefficient: 0.005,
+  mieDirectionalG: 0.8,
+  luminance: 1,
+  inclination: 0.49,
+  azimuth: 0.25,
+  sun: ! true
+ };
+ var uniforms = sky.uniforms;
+ uniforms.turbidity.value = eC.turbidity;
+ uniforms.reileigh.value = eC.reileigh;
+ uniforms.luminance.value = eC.luminance;
+ uniforms.mieCoefficient.value = eC.mieCoefficient;
+ uniforms.mieDirectionalG.value = eC.mieDirectionalG;
+ renderer.render( scene, camera );
+}
 
 var render = function(){
  requestAnimationFrame( render );
+ createSky();
  renderer.render( scene, camera );
 };
 render();

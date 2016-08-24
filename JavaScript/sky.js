@@ -25,7 +25,7 @@ var container;
 				/// GUI
 
 				var effectController  = {
-					turbidity: 10,
+					turbidity: 20,
 					reileigh: 2,
 					mieCoefficient: 0.005,
 					mieDirectionalG: 0.8,

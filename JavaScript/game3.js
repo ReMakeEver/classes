@@ -7,7 +7,7 @@ document.body.appendChild( renderer.domElement );
 
 var render = function(){
  requestAnimationFrame( render );
- createSky();
+ init();
  renderer.render( scene, camera );
 };
 render();

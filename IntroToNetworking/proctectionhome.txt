@@ -1,0 +1,42 @@
+Assignemnt: Protect your Home Network!
+ Students, all of you are network experts, therefore your parents and grandparents are depending on you to use your skill aand expertise to protect your home network.
+I have a list of 27 precautions you should take - here they are:
+
+ Personal Computing Device Recommendations:
+  1. Migrate to a Modern Operating System and Hardware Platform.
+  2. Install a comprehensive Security Suite.
+  3. Limit use of the administrator Account.
+  4. Use the Web Browser with Sandboxing Capabilities.
+  5. Use a PDF Reader with Sandboxing Capabilities.
+  6. Update Application Software.
+  7. Implement Full disk Encryption.
+  8. Download software from only trusted resources.
+ Network Recommendation:
+  1. Configure a flexible home network.
+  2. Disable Internet Protocol Version 6 (IPv6) tunneling.
+  3. Provide Firewall Capabilities.
+  4. Iplement WPA2 on the wireless network.
+  5. Limit Administration to the Internal network.
+  6. Implement an alternate DNS provider.
+  7. Implement stron passwords on all network devices.
+ Home Entertainment Device Recommendations:
+  1. Protect the device within the network.
+  2. Use strong passwords for service accounts.
+  3. Disconnect when not in use.
+ Internet Behavior Recommendation:
+  1. Exercise caution when assessing public hotspots.
+  2. Do not exchange home and work content.
+  3. Be cognizant of device trust levels.
+  4. Be wary of storing personal information, and the Internet.
+  5. Take precautions on Social Networking Sites.
+  6. Enable the use of SSL encryption.
+  7. Follow email and best practices.
+  8. Protect passwords.
+  9. Avoid posting photos with GPS Coodinates.
+  
+ Your mission is to research these precautions and make an instructional document.
+ Write at least a paragraph on each of these (27) steps. This is a project that will
+ count as a test, so take your time and make a document that 12 year old and a
+ grandmother can understand. You have two weeks to produce this document make
+ sure you do a great job.
+ 

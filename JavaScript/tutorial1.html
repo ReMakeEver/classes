@@ -13,7 +13,7 @@
    <script type="text/javascript">
     var mainBody = "<div>";mainBody += "<div align='center'>";mainBody += "<font color='#FFAA00' size='12'>Tutorial One</font>";mainBody += "</div>";mainBody += "<div id='mainMenu'></div>";mainBody += "</div>";mainBody += "<div id='conBody'></div>";
      var mainMenSec = "<div align='center'>";mainMenSec += "<ul id='il'>";mainMenSec += "<font size='8'>";mainMenSec += "<li onclick='case1()'>Case 1</li>";mainMenSec += "<li onclick='case2()'>Case 2</li>";mainMenSec += "<li onclick='case3()'>Case 3</li>";mainMenSec += "<li onclick='case4()'>Case 4</li>";mainMenSec += "</font>";mainMenSec += "</ul>";mainMenSec += "</div>";
-     var case1 = "<div>";case1 += "<div align='center'>Case 1</div>";case1 += "<div>";case1 += "<iframe src='https://remakeever.github.io/classes/JavaScript/t1/case1.html'></iframe>";
+     var case1 = "<div>";case1 += "<div align='center'>Case 1</div>";case1 += "<div>";case1 += "<iframe width='";case1 += window.innerWidth;case1 += "' height='600' src='https://remakeever.github.io/classes/JavaScript/t1/case1.html'></iframe>";
     document.getElementById("divBody").innerHTML = mainBody;document.getElementById("mainMenu").innerHTML = mainMenSec;
     function case1(){ document.getElementById("conBody").innerHTML=case1; }
    </script>

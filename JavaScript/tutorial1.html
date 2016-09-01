@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <title>JavaScript | T1</title>
+   <style>
+    body{ font-family:helvetica; }
+    ul#il li{ display:inline;list-style-type:none; }ul#bl li{ display:block;list-style-type:none; }
+   </style>
+  </head>
+  <body>
+   <noscript>Please Enable JavaScript</noscript>
+   <div id="divBody"></div>
+   <script type="text/javascript">
+    var mainBody = "<div>";mainBody += "<div align='center'>";mainBody += "<font color='#FFAA00' size='12'>Tutorial One</font>";mainBody += "</div>";mainBody += "<div id='mainMenu'></div>";mainBody += "</div>";mainBody += "<div id='conBody'></div>";
+     var mainMenSec = "<div align='center'>";mainMenSec += "<ul id='il'>";mainMenSec += "<font size='8'>";mainMenSec += "<li onclick='case1()'>Case 1</li>";mainMenSec += "<li onclick='case2()'>Case 2</li>";mainMenSec += "<li onclick='case3()'>Case 3</li>";mainMenSec += "<li onclick='case4()'>Case 4</li>";mainMenSec += "</font>";mainMenSec += "</ul>";mainMenSec += "</div>";
+     var case1 = "<div>";case1 += "<div align='center'>Case 1</div>";case1 += "<div>";case1 += "<iframe src='https://remakeever.github.io/classes/JavaScript/t1/case1.html'></iframe>";
+    document.getElementById("divBody").innerHTML = mainBody;document.getElementById("mainMenu").innerHTML = mainMenSec;
+   </script>
+  </body>
+ </html>

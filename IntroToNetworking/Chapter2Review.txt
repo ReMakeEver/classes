@@ -1,0 +1,33 @@
+Landon Pottorff
+Mr. Russel
+Intro To Networking 2
+
+Case Projects
+Case 2-1:
+	To make a fast file transfer speed of a network that has 50 computers that is connected to a 10Mbps hub.
+	First I would divide the number of computers to make five groups of 10 computers.
+	Then connect both groups to five seperate switches. Then connect the each switch to a 10Mbps hub.
+	With the hubs to a switch. Then connect that switch to a router.
+
+Case 2-2:
+	Create four LAN networks, each consisting of a 50 workstations.Each group of workstations will have their own server.
+	Then within each group will be two switches that group 25 workstations into 1.
+	Within each group have a swtich that connects the two other switches and server to 1.
+	Then all five groups will connect to one router.
+
+Case 2-3:
+	Physical topology consists of linear, star, and tree topology. Wich is specific to a map of the topology.
+		Physical topology also shows how wires, and cables are connected.
+	Logical topology consists of bus, and ring topology. Which defines how the data should be transfered.
+	Physical topology is best to be more detailed on how the network is layed out.
+
+	Bus topology is a logical topology. Where the signal is dampened to make sure the signal does not keep moving.
+	
+	Star topology is a physical topology. It consists of swtiches grouping together nodes, and computers.
+		Then will eventually connect to the router.
+
+	Ring topology is a logical topology. This shows how information is passed along from one another.
+		Which is shown in a specific order.
+
+
+		

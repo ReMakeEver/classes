@@ -19,12 +19,12 @@ function worldClock() {
    var time5 = addTime(GMT, 660*60*1000);
    var time6 = addTime(GMT, 540*60*1000);
 
-   document.zones.place1.value=showTime(time1);
-   document.zones.place2.value=showTime(time2);
-   document.zones.place3.value=showTime(time3);
-   document.zones.place4.value=showTime(time4);
-   document.zones.place5.value=showTime(time5);
-   document.zones.place6.value=showTime(time6);
+   document.getElementById("place1").value=showTime(time1);
+   document.getElementById("place2").value=showTime(time2);
+   document.getElementById("place3").value=showTime(time3);
+   document.getElementById("place4").value=showTime(time4);
+   document.getElementById("place5").value=showTime(time5);
+   document.getElementById("place6").value=showTime(time6);
 }
 </script>
 </head>

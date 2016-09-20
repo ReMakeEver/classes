@@ -9,7 +9,7 @@ function renew(){
 }
 function month(){
  var month = new Date().getMonth();
- if(month=="1"){ return jan; }if(month=="2"){
+ if(month=="0"){ return jan; }if(month=="1"){ return feb; }if(month=="2"){ return mar; }if(month=="3"){ return apr; }if(month=="4"){ return may; }if(month=="5"){ return jun; }if(month=="6"){ return jul; }
 }
 function day(){
  var day = new Date().getDay();

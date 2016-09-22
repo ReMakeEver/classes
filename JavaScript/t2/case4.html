@@ -3,15 +3,12 @@
   <head>
    <title>Tutorial 2 | Case 4</title>
    <script src="js/time.js"></script>
-   <script type="text/javascript">
-    renew();
-   </script>
    <style>
     body{ font-family:Helvetica; }
     ul#il li{ display:inline; }
    </style>
   </head>
-  <body>
+  <body onload="setInterval(function(){ renew(); }, 1000)">
    <div align="center">
     <ul id="il">
      <li>

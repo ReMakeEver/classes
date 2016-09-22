@@ -7,6 +7,7 @@
     body{ font-family:Helvetica; }
     ul#il li{ display:inline; }
     li#left{ float:left; }
+    div#content{ float:left; }div#pictures{ float:right; }
    </style>
   </head>
   <body onload="setInterval(function(){ renew(); }, 1000)">
@@ -25,6 +26,21 @@
     </ul>
    </div>
    <div>
+    <div id="content">
+     
+    </div>
+    <div id="pictures">
+     <table>
+      <tr>
+       <th><img id="images" src="img/mall1.jpg" /></th>
+      </tr>
+      <tr>
+       <td><input type="button" text="<<" onclick="prev" /></td>
+       <td><p id="onImage">0/1</p></td>
+       <td><input type="button" text=">>" onclick="forw" /></td>
+      </tr>
+     </table>
+    </div>
    </div>
    <div align="right">
     <p><b>The Day Is</b></p>

@@ -33,7 +33,7 @@
     <div id="pictures" align="right">
      <table>
       <tr>
-       <th><img id="images" src="img/mall1.jpg" /></th>
+       <th id="images"><img src="img/mall1.jpg" /></th>
       </tr>
       <tr>
        <td><a href="javascript:back();">Back</a></td>
@@ -54,10 +54,10 @@
     }
     function back(){
      if(id==="2/3"){ 
-      document.getElementById("images").src = "img/mall1.jpg";document.getElementById("onImage").innerHTML = "1/3"; 
+      document.getElementById("images").innerHTML = "<img src='img/mall1.jpg' />";document.getElementById("onImage").innerHTML = "1/3"; 
      }else{
       if{id==="3/3"){
-       document.getElementById("images").src = "img/mall2.jpg";document.getElementById("onImage").innerHTML = "2/3";
+       document.getElementById("images").innerHTML = "<img src='img/mall2.jpg' />";document.getElementById("onImage").innerHTML = "2/3";
       }
      }
     }

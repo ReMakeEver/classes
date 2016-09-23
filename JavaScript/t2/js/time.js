@@ -16,5 +16,5 @@ function day(){
 }
 function time(){
  var d = new Date();var n = d.toLocaleTimeString();var len = n.length;
- return n.substr(0,len-4)+" "+n.substr(len-2,len);
+ return n.substr(0,8)+" "+n.substr(len-2,len);
 }

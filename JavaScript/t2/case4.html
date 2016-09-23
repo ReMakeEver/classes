@@ -37,7 +37,7 @@
       </tr>
       <tr>
        <td><input type="button" value="Prev." onclick="prev" /></td>
-       <td><p id="onImage">1/1</p></td>
+       <td><p id="onImage">1/3</p></td>
        <td><input type ="button" value="Next." onclick="forw" /></td>
       </tr>
      </table>
@@ -48,10 +48,29 @@
     <li><p id="theMonth"></p> <p id="theDay"></p> <p id="theTime"></p></li>
    </ul>
    <script type="text/javascript">
+    var id = document.getElementById("onImage").innerHTML;
     function reload(){
      window.location="https://remakeever.github.io/classes/JavaScript/t2/case4.html";
     }
     document.getElementById("home").addEventListener("click", reload);
+    function prev(){
+     if(id=="2/3"){ 
+      document.getElementById("images").src = "img/mall1.jpg";document.getElementById("onImage").innerHTML = "1/3"; 
+     }else{
+      if{id=="3/3"){
+       document.getElementById("images").src = "img/mall2.jpg";document.getElementById("onImage").innerHTML = "2/3";
+      }
+     }
+    }
+    function forw(){
+     if(id=="1/3"){
+      document.getElementById("images").src = "img/mall2.jpg";document.getElementById("onImage").innerHTML = "2/3";
+     }else{
+      if(id=="2/3"){
+       document.getElementById("images").src = "img/mall3.jpg";document.getElementById("onImage").innerHTML = "3/3";
+      }
+     }
+    }
    </script>
   </body>
  </html>

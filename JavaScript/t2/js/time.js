@@ -17,13 +17,9 @@ function day(){
 function time(){
  var d = new Date();var n = d.toLocaleTimeString();var len = n.length;
  if(len=="33"){
-  lenIs33();
+  return n.substr(0,8)+" "+n.substr(len-2,len);
  }
  if(len=="21"){
-  lenIs21();
+  return n.substr(0,4)+" "+n.substr(len-2,len);
  }
-}
-function lenIs21(){
- var d = new Date();var n = d.toLocaleTimeString();var len = n.length;
- return n.substr(0,4)+" "+n.substr(len-2,len);
 }

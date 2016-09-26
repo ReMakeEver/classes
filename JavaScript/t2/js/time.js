@@ -16,10 +16,10 @@ function day(){
 }
 function time(){
  var d = new Date();var n = d.toLocaleTimeString();var len = n.length;
- if(len==33){
+ if(len=="33"){
   lenIs33();
  }
- if(len==21){
+ if(len=="21"){
   lenIs21();
  }
 }

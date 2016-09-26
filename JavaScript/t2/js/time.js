@@ -12,7 +12,7 @@ function month(){
 }
 function day(){
  var day = new Date().getDay();
- if(day=="0"){ return one; }if(day=="1"){ return two; }if(day=="2"){ return three; }if(day=="3"){ return four; }if(day=="4"){ return five; }if(day=="5"){ return six; }if(day=="6"){ return seven; }
+ if(day=="0"){ return seven; }if(day=="1"){ return one; }if(day=="2"){ return two; }if(day=="3"){ return three; }if(day=="4"){ return four; }if(day=="5"){ return five; }if(day=="6"){ return six; }
 }
 function time(){
  var d = new Date();var n = d.toLocaleTimeString();var len = n.length;

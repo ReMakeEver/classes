@@ -16,7 +16,7 @@ function day(){
 }
 function time(){
  var d = new Date();var n = d.toLocaleTimeString();var len = n.length;
- if(len==21){
+ while(len==21){
   return n.substr(0,4)+" "+n.substr(len-2,len);
  }
 }

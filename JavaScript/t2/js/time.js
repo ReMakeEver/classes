@@ -16,7 +16,11 @@ function day(){
 }
 function time(){
  var d = new Date();var n = d.toLocaleTimeString();var len = n.length;
- while(len==21){
-  return n.substr(0,4)+" "+n.substr(len-2,len);
+ if(len==21){
+  document.getElementById(theTime).innerHTML = time21();
  }
+}
+function time21(){
+ var  d = new Date();var n = d.toLocaleTimeString();var len = n.length;
+ return n.substr(0,4)+" "+n.substr(len-2,len);
 }

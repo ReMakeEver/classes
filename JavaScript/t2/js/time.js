@@ -17,9 +17,13 @@ function day(){
 function time(){
  var d = new Date();var n = d.toLocaleTimeString();var len = n.length;
  if(len==33){
-  return n.substr(0,8)+" "+n.substr(len-2,len);
+  lenIs33();
  }
  if(len==21){
-  return n.substr(0,4)+" "+n.substr(len-2,len);
+  lenIs21();
  }
+}
+function lenIs21(){
+ var d = new Date();var n = d.toLocaleTimeString();var len = n.length;
+ return n.substr(0,4)+" "+n.substr(len-2,len);
 }

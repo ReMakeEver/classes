@@ -3,7 +3,7 @@
   <head>
    <title>Congressional Races</title>
    <link href="css1/results.css" rel="stylesheet" type="text/css" />
-   <script src="js1/votes.js" type="text/javascript"></script>
+   <script type="text/javascript" src="js1/votes.js"></script>
    <script type="text/javascript">
     function totalVotes(votes){
      var total = 0;
@@ -23,7 +23,7 @@
      }
      for(var j=1;j<=percent;j++) document.write(barText);
     }
-    function showResults(race,name,party,votes){
+    function showResults(race, name, party, votes){
      var totalV = totalVotes(votes);
      document.write("<h2>"+race+"</h2>");
      document.write("<table cellspacing='0'>");

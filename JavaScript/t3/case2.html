@@ -33,8 +33,8 @@
       document.write("<td>"+name[i]+" ("+party[i]+")</td>");
       document.write("<td class='num'>"+votes[i]+"</td>");
       var percent = calcPercent(votes[i],totalV);
-      document.write("<td class='num'>("+percent+")</td>";
-      createBar(part[i], percent);
+      document.write("<td class='num'>("+percent+"%)</td>";
+      createBar(party[i], percent);
       document.write("</tr>");
      }
      document.write("</table>");

@@ -1,40 +1,33 @@
 /*
    New Perspectives on JavaScript
-   Tutorial 2
-   Case Problem 1
+   Tutorial 1
+   Case Problem 3
+   Filename: functions.js
 
-   Function List:
-   showQuiz()
-      Used to make the quiz questions visible
+   This file contains functions used in the today.htm file.
 
-   hideQuiz()
-      Used to hide the quiz questions
+   The showDate function displays the date in the format: "Weekday, Month Day, Year"
+   The weekDay function displays the weekday name
+
 */
 
-
-function showQuiz() {
-   document.getElementById("quiztable").style.visibility="visible";
+function showDate() {
+   thisDate = new Date();
+   var thisWDay=thisDate.getDay();
+   var thisDay=thisDate.getDate();
+   var thisMonth=thisDate.getMonth();
+   var thisYear=thisDate.getFullYear();
+   var mName = new Array("January", "February", "March", "April", "May", 
+       "June", "July", "August", "September", "October","November", "December");
+   var wdName = new Array("Sunday", "Monday", "Tuesday", "Wednesday",
+       "Thursday", "Friday", "Saturday");
+   return wdName[thisWDay]+", "+mName[thisMonth]+" "+thisDay+", "+thisYear;
 }
 
-function hideQuiz() {
-   document.getElementById("quiztable").style.visibility="hidden";
-}
-
-function gradeQuiz() {
-   correct=0;
-   if (document.quiz.q1[2].checked) correct++;
-   if (document.quiz.q2[0].checked) correct++;
-   if (document.quiz.q3[3].checked) correct++;
-   if (document.quiz.q4[0].checked) correct++;
-   if (document.quiz.q5[3].checked) correct++;
-   
-   document.getElementById("cor1").style.backgroundColor="yellow";
-   document.getElementById("cor2").style.backgroundColor="yellow";
-   document.getElementById("cor3").style.backgroundColor="yellow";
-   document.getElementById("cor4").style.backgroundColor="yellow";
-   document.getElementById("cor5").style.backgroundColor="yellow";
-
-   for (i=0; i<document.quiz.elements.length; i++) document.quiz.elements[i].disabled=true;
-
-   return correct;
+function weekDay(){
+   thisDate = new Date();
+   var thisWDay=thisDate.getDay();
+   var wdName = new Array("sunday", "monday", "tuesday", "wednesday",
+       "thursday", "friday", "saturday");
+   return wdName[thisWDay];
 }

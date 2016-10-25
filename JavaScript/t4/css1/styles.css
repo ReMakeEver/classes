@@ -1,0 +1,25 @@
+/*
+   New Perspectives on JavaScript
+   Tutorial 4
+   Case Problem 1
+   Filename: styles.css
+
+   This file contains styles used in the golfpage.htm file
+*/
+
+body {font-family:Arial, Helvetica, sans-serif; font-size: 18pt;
+         color:blue; background-image: url(clouds.jpg)}
+
+#Title {position: absolute; left:395px; top:260px}
+
+#Ball {position:relative; top:0px; left:0px}
+
+#Ball img {border-width: 0px}
+
+#box {width:600px; height: 250px;
+            border-style:solid; border-width:1 4 4 1; border-color:blue;             
+            background-color:rgb(0,255,0); text-align: center}
+
+#slogan {visibility: hidden; position: relative; top: 50px;
+            color:black; font-family: Times New Roman, Times, serif;
+            font-style:italic; font-weight:bold}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <title>The Lighthous</title>
+   <link href="css1/lhouse.css" rel="stylesheet" type="text/css" />
+   <script src="js1/list.js" type="text/javascript"></script>
+   <script type="text/javascript">
+    function amountTotal(){
+     total = 0;
+     for(var i=0;i<amount.length;i++){
+      total+=amount[i];
+     }
+     return total;
+    }
+   </script>
+  </head>
+  <body>
+   <div id="title"><img src="img1/logo.jpg" alt="The Lighthouse" />Th Lighthouse<br />543 Oak Street<br />Delphi, KY &nbsp;&nbsp;89011<br />(542)555-7511</div>
+   <div id="data_list">
+    <script type="text/javascript">
+     document.write("<table border='1' rules='rows' cellspacing='0'>");
+     document.write("<tr><th>Date</th><th>Amount</th><th>First Name</th>");
+     document.write("<th>Last Name</th><th>Address</th></tr>");
+     for(i =0;i<amount.length;i++){
+      if(i%2==0)document.write("<tr>");
+      else document.write("tr class='yellowrow'>");
+      document.write("<td>"+date[i]+"</td>");
+      document.write("<td>"+amount[i]+"</td>");
+      document.write("<td>"+firstName[i]+"</td>");
+      document.write("<td>"+lastName[i]+"</td>");
+      document.write("<td>");
+      document.write(street[i]+"<br />");
+      document.write(city[i]+", "+state[i]+" "+zip[i]);
+      document.write("</td>");
+      document.write("</tr>");
+     }
+     document.write("</table>");
+    </script>
+   </div>
+   <div id="totals">
+    <script type="text/javascript">
+     document.write("<table border='1' cellspacing='1'>");
+     document.write("<tr><th id='sumTitle' colspan='2'>Summary</th></tr>");
+     document.write("<tr><th>Contributors</th>");
+     document.write("<td>"+amount.length+"</td></tr>");
+     document.write("<tr><th>Amount</th>");
+     document.wrtie("<td>$"+amountTotal()+"</td></tr>");
+     document.write("</table>");
+    </script>
+   </div>
+  </body>
+ </html>

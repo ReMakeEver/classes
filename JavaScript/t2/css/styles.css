@@ -1,39 +1,36 @@
 /*
    New Perspectives on JavaScript
-   Tutorial 3
+   Tutorial 2
    Case Problem 2
    Filename: styles.css
 
-   This file contains styles used in the Ridgewood Herald Tribune Web site
+   This file contains styles used in the home.htm file.
 
 */
 
-   #links {background-color:rgb(128,0,128); color:white; font-size:8pt;
+   body {margin: 10px 0px 0px 0px; background-image: url(work.jpg)}
+   #links {font-size:8pt;
            font-family: Arial, Helvetica, sans-serif;
-           width:120px; padding:5px; border: 1px solid teal}
-   #links a {color:white; text-decoration:none}
-   #links a:hover {text-decoration:underline; color:yellow}
-   #links h1 {font-weight:bold; text-align:center; font-size:12pt; margin-bottom:10px;
-              letter-spacing: 3}
-   .section {width: 100%; background-color: yellow; color: purple; padding-left: 5px;
-             margin-bottom: 0px; margin-top: 0px}
-   .linksub {margin-top: 1px; margin-bottom: 5px}
-   .linksub a {margin-left: 15px}
-   #main {position: absolute; top: 5px; left: 145px; width: 500px}
-   #request {position: absolute; top: 0px; left: 400px; height: 58px; width: 100px; 
-             background-color: purple; 
-             font-family: Arial, Helvetica, sans-serif; font-size: 10pt;
-             border: 1px solid purple; text-align: center; font-weight: bold}
-   #request a {text-decoration: none; color: white}
-   #logo {margin-bottom: 20px}
-   #main h2 {font-family:Arial, Helvetica, sans-serif; color:rgb(128,0,128);
-             text-align:center; letter-spacing: 4;
-             border-bottom: 1px solid teal; border-top: 1px solid teal}
-   #fp {float: left; margin: 0px 5px 5px 0px}
-   #intro {text-align: justify}
+           width:155px}
+   #links ul {margin-top: 5px}
+   #links li {list-style-type: square; font-size: 8pt; font-family: Arial, Helvetica, sans-serif}
+   #links li.new {margin-top: 10px}
+   #links a {color:brown; text-decoration:none}
+   #links a:hover {text-decoration:underline; color: brown}
 
-   #footer {color:rgb(128,0,128); font-family:Arial, Helvetica, sans-serif;
-            text-align:center; font-size:8pt; font-style: normal;
-            border-top:1px solid teal; border-bottom:1px solid teal;
-            margin-top:20px}
-   p.cont {font-family:Arial, Helvetica, sans-serif; font-size:8pt; text-align: right}
+   #searchbox {position: absolute; top: 5px; left: 165px; width: 530px; text-align: right;
+               font-size: 10pt; font-family: Arial, Helvetica, sans-serif}
+   #searchbox input {font-size: 9pt}
+   #main {position: absolute; top: 35px; left: 165px; width: 530px; padding: 10px 5px 5px 5px;
+          border-top: 10px solid rgb(184, 136, 134); border-right: 1px solid black;
+          border-bottom: 1px solid black; border-left: 1px solid black; background-color: white}
+   #main b {color: rgb(184, 136, 134)}
+   #firstp:first-line {font-variant: small-caps}
+   #tip {float: right; width: 200px; border-width: 1px 3px 3px 1px;
+         border-color: black; border-style: solid; margin: 3px;
+          background-color: rgb(255, 255, 192); font-size: 8pt; padding: 5px}
+   #tip h1 {font-size: 10pt; text-align: center; font-family: Arial, Helvetica, sans-serif;
+            color: white; margin: 0px; background-color: rgb(184, 136, 134); padding: 2px;
+            letter-spacing: 2}
+   #tip h1:first-line {color: yellow}
+   #tip p {margin: 3px; font-family: Arial, Helvetica, sans-serif}

@@ -31,11 +31,11 @@
      if(race=="1st Congressional District"){
       for(var i=0;i<name1.length;i++){
        document.write("<tr>");
-       document.write("<td>"+name1[i]+" ("+party1[i]+")</td>");
-       document.write("<td class='num'>"+votes1[i]+")</td>");
-       var percent = calcPercent(votes1[i],totalV);
+       document.write("<td>"+name1[i].substring()+" ("+party1[i].substring()+")</td>");
+       document.write("<td class='num'>"+votes1[i].substring+")</td>");
+       var percent = calcPercent(votes1[i].substring,totalV);
        document.write("<td class='num'>("+percent+"%)</td>");
-       createBar(party1[i],percent);
+       createBar(party1[i].substring,percent);
        document.write("</tr>");
       }
      }

@@ -31,7 +31,7 @@
      if(race=="1st Congressional District"){
       for(var i=0;i<name1.length;i++){
        document.write("<tr>");
-       document.write("<td>"+name1[i].substring()+" ("+party1[i].substring()+")</td>");
+       document.write("<td>"+name1[i].substring(0,name1[1].length)+" ("+party1[i].substring()+")</td>");
        document.write("<td class='num'>"+votes1[i].substring+")</td>");
        var percent = calcPercent(votes1[i].substring,totalV);
        document.write("<td class='num'>("+percent+"%)</td>");

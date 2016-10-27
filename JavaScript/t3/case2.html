@@ -23,9 +23,8 @@
      }
      for(var j=1;j<=percent;j++) document.write(barText);
     }
-    function showResults(race){
+    function showResults(race,votes){
      var totalV=totalVotes(votes);
-     var race = races.substring();
      document.write("<h2>"+race+"</h2>");
      document.write("<table cellspacing='0'>");
      document.write("<tr><th>Candidate</th><th class='num'>Votes</th><th class=num'>%</th></tr>");
@@ -103,11 +102,11 @@
    <div id="results">
     <h1>Congressional Races</h1>
     <script>
-    showResults(races[0],name1,party1,votes1);
-    showResults(races[1],name2,party2,votes2);
-    showResults(races[2],name3,party3,votes3);
-    showResults(races[3],name4,party4,votes4);
-    showResults(races[4],name5,party5,votes5);
+    showResults(races[0],votes1);
+    showResults(races[1],votes2);
+    showResults(races[2],votes3);
+    showResults(races[3],votes4);
+    showResults(races[4],votes5);
    </script>
   </body>
  </html>

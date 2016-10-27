@@ -32,7 +32,7 @@
       document.write("<tr>");
       document.write("<td>"+name[i]+" ("+party[i]+")</td>");
       document.wrtie("<td class='num'>"+votes[i]+"</td>");
-      var percent = calcPercen(votes[i], totalV);
+      var percent = calcPercent(votes[i], totalV);
       document.write("<td class='num'>("+percent+"%)</td>");
       createBar(party[i], percent);
       document.write("</tr>");

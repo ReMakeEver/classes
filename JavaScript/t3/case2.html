@@ -28,16 +28,62 @@
      document.write("<h2>"+race+"</h2>");
      document.write("<table cellspacing='0'>");
      document.write("<tr><th>Candidate</th><th class='num'>Votes</th><th class=num'>%</th></tr>");
-     for(var i=0;i<name.length;i++){
-      document.write("<tr>");
-      document.write("<td>"+name[i]+" ("+party[i]+")</td>");
-      document.wrtie("<td class='num'>"+votes[i]+"</td>");
-      var percent = calcPercent(votes[i], totalV);
-      document.write("<td class='num'>("+percent+"%)</td>");
-      createBar(party[i], percent);
-      document.write("</tr>");
+     if(race[0]=="1st Congressional District"){
+      for(var i=0;i<name1.length;i++){
+       document.write("<tr>");
+       document.write("<td>"+name1[i]+" ("+party1[i]+")</td>");
+       document.write("<td class='num'>"+votes1[i]+")</td>");
+       var percent = calcPercent(votes1[i],totalV);
+       document.write("<td class='num'>("+percent+"%)</td>");
+       createBar(party1[i],percent);
+       document.write("</tr>");
+      }
      }
-     document.write("</table>");
+     if(race=="2nd Congressional District"){
+      for(var i=0;i<name2.length;i++){
+       document.write("<tr>");
+       document.write("<td>"+name2[i]+" ("+party2[i]+")</td>");
+       document.write("<td class='num'>"+votes2[i]+")</td>");
+       var percent = calcPercent(votes2[i],totalV);
+       document.write("<td class='num'>("+percent+"%)</td>");
+       createBar(party2[i],percent);
+       document.write("</tr>");
+      }
+     }
+     if(race=="3rd Congressional District"){
+      for(var i=0;i<name3.length;i++){
+       document.write("<tr>");
+       document.write("<td>"+name3[i]+" ("+party3[i]+")</td>");
+       document.write("<td class='num'>"+votes3[i]+")</td>");
+       var percent = calcPercent(votes3[i],totalV);
+       document.write("<td class='num'>("+percent+"%)</td>");
+       createBar(party3[i],percent);
+       document.write("</tr>");
+      }
+     }
+     if(race=="4th Congressional District"){
+      for(var i=0;i<name4.length;i++){
+       document.write("<tr>");
+       document.write("<td>"+name4[i]+" ("+party4[i]+")</td>");
+       document.write("<td class='num'>"+votes4[i]+")</td>");
+       var percent = calcPercent(votes4[i],totalV);
+       document.write("<td class='num'>("+percent+"%)</td>");
+       createBar(party4[i],percent);
+       document.write("</tr>");
+      }
+     }
+     if(race=="5th Congressional District"){
+      for(var i=0;i<name5.length;i++){
+       document.write("<tr>");
+       document.write("<td>"+name5[i]+" ("+party5[i]+")</td>");
+       document.write("<td class='num'>"+votes5[i]+")</td>");
+       var percent = calcPercent(votes5[i],totalV);
+       document.write("<td class='num'>("+percent+"%)</td>");
+       createBar(part5[i],percent);
+       document.write("</tr>");
+      }
+     }
+     document.wrtie("</table>");
     }
    </script>
   </head>
@@ -55,14 +101,12 @@
    </div>
    <div id="results">
     <h1>Congressional Races</h1>
-    <div id="races"></div>
     <script>
-     showResults(race[0],name1,party1,votes1);
-     showResults(race[1],name2,party2,votes2);
-     showResults(race[2],name3,party3,votes3);
-     showResults(race[3],name4,party4,votes4);
-     showResults(race[4],name5,party5,votes5);
-    </script>
-   </div>
+    showResults(races[0],name1,party1,votes1);
+    showResults(races[1],name2,party2,votes2);
+    showResults(races[2],name3,party3,votes3);
+    showResults(races[3],name4,party4,votes4);
+    showResults(races[4],name5,party5,votes5);
+   </script>
   </body>
  </html>

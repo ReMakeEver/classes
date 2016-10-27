@@ -23,12 +23,13 @@
      }
      for(var j=1;j<=percent;j++) document.write(barText);
     }
-    function showResults(race, name, party, votes){
+    function showResults(race){
      var totalV=totalVotes(votes);
+     var race = races.substring();
      document.write("<h2>"+race+"</h2>");
      document.write("<table cellspacing='0'>");
      document.write("<tr><th>Candidate</th><th class='num'>Votes</th><th class=num'>%</th></tr>");
-     if(race[0]=="1st Congressional District"){
+     if(race=="1st Congressional District"){
       for(var i=0;i<name1.length;i++){
        document.write("<tr>");
        document.write("<td>"+name1[i]+" ("+party1[i]+")</td>");

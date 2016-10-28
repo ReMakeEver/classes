@@ -1,6 +1,0 @@
-trussell@d49.org
-Case Projects
-Case Project 3-1:
-	Old-Tech Corporation has 10 computers in its main office area, which is networked in a star topology.
-	Using a 10Mbps ethernet hub the want to add five computers in the manufacturing area.
-	One problem

@@ -1,0 +1,14 @@
+Layer 1:
+ Name: Physical
+Layer 2:
+ Name: Data Link:
+Layer 3:
+ Name: Network
+Layer 4:
+ Name: Transport
+Layer 5:
+ Name: Session
+Layer 6:
+ Name: Presentation
+Layer 7:
+ Name: Application

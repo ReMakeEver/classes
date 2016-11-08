@@ -3,8 +3,17 @@
   <head>
    <title>The Cutler Shopping Mall</title>
    <script type="text/javascript" src="clocks.js"></script>
+   <script type="text/javascript">
+    var mallImgs = ["mall1.jpg","mall2.jpg","mall3.jpg"];
+    var num = 0;
+    function setMall(){
+     if(num===0){
+      document.getElementById("mallImg").src = malImgs[0];
+     }
+    }
+   </script>
   </head>
-  <body onload="setInterval(function{ changeImg() }, 1000)">
+  <body onload="setInterval(function{ setMall() }, 1000)">
    <div align="center">
     <div id="logo">
      <img src="logo.jpg" />
@@ -12,15 +21,6 @@
     <div>
      <img id="mallImg" />
     </div>
-    <script type="text/javascript">
-     var imgSrc = ["mall1.jpg","mall2.jpg","mall3.jpg"];
-     var num = 0;
-     function changeImg(){
-      if(num===0){
-       document.getElementById("mallImg").src = imgSrc[0];
-      }
-     }
-    </script>
     <div align="left">
     </div>
    </div>

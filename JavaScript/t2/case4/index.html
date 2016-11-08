@@ -16,17 +16,8 @@
      var imgSrc = ["mall1.jpg","mall2.jpg","mall3.jpg"];
      var num = 0;
      function changeImg(){
-      for(var i = 4;i>num;i++){
-       num = +1;
-      }
-      if(num==1){
-       document.write("1");
-      }
-      if(num==2){
-       document.write("2");
-      }
-      if(num==3){
-       document.write("3");
+      if(num==0){
+       document.getElementById("mallImg").src = imgSrc[0];
       }
      }
     </script>

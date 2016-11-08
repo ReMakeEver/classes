@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <title>The Cutler Shopping Mall</title>
+   <script type="text/javascript" src="clocks.js"></script>
+  </head>
+  <body>
+   <div align="center">
+    <div id="logo">
+     <img src="logo.jpg" />
+    </div>
+    <div onload="setInterval('changeImg', 100)">
+     <img id="mallImg" />
+    </div>
+    <script type="text/javascript">
+     var imgSrc = ["mall1.jpg","mall2.jpg","mall3.jpg"];
+     var num = 1;
+     function changeImg(){
+      if(num==4){ num = 0; }
+      for(var i = 0;i<num;i++){
+       num += 1;
+      }
+      document.write(num);
+     }
+    </script>
+    <div align="left">
+    </div>
+   </div>
+  </body>
+ </html>

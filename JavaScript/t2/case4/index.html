@@ -7,15 +7,17 @@
   <body onload="setInterval(function{ setMall() }, 1000)">
    <div align="center">
     <div id="logo">
-     <img src="logo.jpg" />
+     <img src="logo.jpg">
     </div>
     <div>
-     <img id="mallImg" />
+     <img id="mallImg" >
      <script type="text/javascript">
       var mallImgs = ["mall1.jpg", "mall2.jpg","mall3.jpg"];
       var num = 0;
       function setMall(){
-       
+       if(num==0){
+        document.getElementById("mallImg").src = mallImgs[0];
+       }
       }
      </script>
     </div>

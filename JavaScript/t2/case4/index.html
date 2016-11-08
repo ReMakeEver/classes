@@ -4,12 +4,12 @@
    <title>The Cutler Shopping Mall</title>
    <script type="text/javascript" src="clocks.js"></script>
   </head>
-  <body>
+  <body onload="setInterval(function{ changeImg() }, 10000)">
    <div align="center">
     <div id="logo">
      <img src="logo.jpg" />
     </div>
-    <div onload="setInterval(changeImg, 100)">
+    <div>
      <img id="mallImg" />
     </div>
     <script type="text/javascript">

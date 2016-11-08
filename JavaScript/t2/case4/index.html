@@ -3,15 +3,6 @@
   <head>
    <title>The Cutler Shopping Mall</title>
    <script type="text/javascript" src="clocks.js"></script>
-   <script type="text/javascript">
-    var mallImgs = ["mall1.jpg","mall2.jpg","mall3.jpg"];
-    var num = 0;
-    function setMall(){
-     if(num===0){
-      document.getElementById("mallImg").src = malImgs[0];
-     }
-    }
-   </script>
   </head>
   <body onload="setInterval(function{ setMall() }, 1000)">
    <div align="center">
@@ -20,6 +11,13 @@
     </div>
     <div>
      <img id="mallImg" />
+     <script type="text/javascript">
+      var mallImgs = ["mall1.jpg", "mall2.jpg","mall3.jpg"];
+      var num = 0;
+      function setMall(){
+       
+      }
+     </script>
     </div>
     <div align="left">
     </div>

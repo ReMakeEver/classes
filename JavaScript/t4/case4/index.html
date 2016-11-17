@@ -7,7 +7,7 @@
     ul#il li{ display:inline; }ul#bl li{ display:block; }ul#dibl li{ list-style-type:disc;display:block; }
    </style>
   </head>
-  <body onload="setInterval(function(){ bugs(); }, 2000)">
+  <body>
    <div align="center">
     <ul id="il">
      <font size="12">
@@ -38,7 +38,6 @@
    </div>
    <script type="text/javascript">
     var imgs = {"bug.jpg","bugdead.jpg"};
-    var imgA = "<img src='";var imgB = "' />";
     var num = 1;
     function bugs(){
      if(num==3){
@@ -52,10 +51,10 @@
     }
     function switchPic(){
      if(num==1){
-      document.getElementById("image").innerHTML = imgA+imgs[0]+imgB;
+      document.getElementById("image").innerHTML = imgs[0];
      }else{
       if(num==2){
-       document.getElementbyId("image").innerHTML = imgA+imgs[1]+imgB;
+       document.getElementById("image").innerHTML = imgs[1];
       }
      }
     }

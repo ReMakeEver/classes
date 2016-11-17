@@ -37,12 +37,14 @@
    <div>
     <div id="images" align="center">
     </div>
-    <div align="right">
-    </div>&#8592 &#8592 &#8592 to kill click the fly &#8592 &#8592 &#8592</div>
+    <div id='swatter' align="center">
+     click to kill the fly
+    </div>
    </div>
    <script type="text/javascript">
-    var imgs = new Array("<img src='bug.jpg' alt='bug' id='i1' onclick='switchPic()' />","<img src='bugdead.jpg' alt='bug' id='i2' onclick='switchPic)' />");
+    var imgs = new Array("<img src='bug.jpg' alt='bug' id='i1' />","<img src='bugdead.jpg' alt='bug' id='i2' />");
     var num = 1;
+    document.getElementById("swatter").addEventListener("click", switchPic);
     function bugs(){
      document.getElementById("images").innerHTML = imgs[0];
     }

@@ -7,7 +7,7 @@
     ul#il li{ display:inline; }ul#bl li{ display:block; }ul#dibl li{ list-style-type:disc;display:block; }
    </style>
   </head>
-  <body>
+  <body onload="setInterval(function(){ bugs(); }, 3000)">
    <div align="center">
     <ul id="il">
      <font size="12">
@@ -58,6 +58,7 @@
       }
      }
     }
+    document.getElementById("image").innerHTML = imgs[0];
    </script>
   </body>
  </html>

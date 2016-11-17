@@ -1,0 +1,64 @@
+/*
+   New Perspectives on JavaScript
+   Tutorial 9
+   Tutorial Case 2
+   Filename: merchant.css
+   
+   This file contains styles used in the merchant.htm, merchant_acct.htm,
+   and the merchant_thanks.htm files.
+
+*/
+
+body
+	{
+		background-color:#ccccff;
+		font-family:verdana;
+		font-size:12px;
+	}
+#form1
+	{
+		position:absolute;
+		top:150px;
+		left:150px;
+		font-size:14px;
+	}
+#login_form
+	{
+		position:absolute;
+		top:1%;
+		left:73%;
+		border:solid 1px #000000;
+		font-size:12px;
+		width:22%;
+		padding:5px;
+	}
+input
+	{
+		font-size:90%;
+	}
+#registration_form
+	{
+		position:absolute;
+		top:30%;
+		left:10%;
+		font-size:12px;
+	}
+.table_text
+	{
+		font-size:105%;
+	}
+td
+	{
+		font-size:100%;;
+	}
+#thanks
+	{
+		position:absolute;
+		top:150px;
+		left:150px;
+		border:solid 1px #000000;
+		font-size:14px;
+		width:400px;
+		padding:5px;
+		line-height:1.5em;
+	}

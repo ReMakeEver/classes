@@ -1,0 +1,62 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on JavaScript
+   Tutorial 6
+   Case Problem 3
+
+   Web Design Demo Control Buttons
+   Author: Andrew Seaborn
+   Date:   1/7/2007
+
+   Filename:         title.htm
+   Supporting files: title.css
+
+-->
+<title>Web Design Demo Control Buttons</title>
+<link href="title.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+function showPreview() {
+   parent.document.getElementById("demo").rows="100,1,*";
+}
+
+function showCode() {
+   parent.document.getElementById("demo").rows="100,*,1";
+   parent.frames[1].document.getElementById("inputhtml").style.height="300px" 
+   parent.frames[2].document.getElementById("inputcss").style.height="300px"  
+}
+
+function showBoth() {
+   parent.document.getElementById("demo").rows="100,210,*";
+   parent.frames[1].document.getElementById("inputhtml").style.height="150px" 
+   parent.frames[2].document.getElementById("inputcss").style.height="150px" 
+}
+
+function sendCode() {
+   previewFrame = parent.frames[3];
+   htmlCode = parent.frames[1].document.getElementById("inputhtml").value;
+   cssCode = parent.frames[2].document.getElementById("inputcss").value;
+
+   previewFrame.document.write("<html><head><title></title>");
+   previewFrame.document.write("<style type='text/css'>"+cssCode+"</style>");
+   previewFrame.document.write("</head><body>"+htmlCode+"</body></html>");
+   previewFrame.document.close();
+}
+
+</script>
+
+</head>
+<body>
+<form name="control" id="control" action="">
+<h2 id="demotitle">Creating Web Pages</h2>
+<p>
+   <input type="button" value="Submit Code" onclick="sendCode()" />
+   <input type="button" value="Show Only Code" onclick="showCode()" />
+   <input type="button" value="Show Only Preview" onclick="showPreview()" />
+   <input type="button" value="Show Code and Preview" onclick="showBoth()" />
+</p>
+</form>
+</body>
+</html>

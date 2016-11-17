@@ -1,0 +1,27 @@
+/*
+   New Perspectives on JavaScript
+   Tutorial 5
+   Case Problem 3
+   Filename: je.css
+
+   This file contains styles used in the printer.htm file
+*/
+
+body            {margin: 0px; background: white url(back.jpg) repeat-y scroll 700px 0px}
+#logo           {position: absolute; top: 12px; left: 590px}
+
+.mainTitles     {width: 94px; height: 18px; position: absolute}
+.mainTitles img {border: 0px}
+.mainMenus      {position: absolute; top: 46px; left: 10px}
+
+#sideMenu       {position: absolute; top: 100px; left: 10px; z-index: 2}
+.sideMenus      {position: absolute; z-index: 1}
+#sideMenu img   {border: 0px}
+
+#main           {position: absolute; top: 100px; left: 140px; width: 520px;
+                 border-top: 1px solid blue; padding-top: 10px;
+                 border-bottom: 1px solid blue; padding-bottom: 20px}
+#main h1        {font-family: Arial, Helvetica, sans-serif; font-size: 20pt;
+                 letter-spacing: 5; color: blue}
+#main p         {font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+#main img       {float: right; margin: 0px 0px 10px 15px}

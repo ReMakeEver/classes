@@ -1,0 +1,150 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on JavaScript
+   Tutorial 5
+   Case Problem 3
+
+   Jackson Electronics
+   Author: 
+   Date:   
+
+   Filename:         printer.htm
+   Supporting files: back.jpg, je.css, logo.jpg, main1.jpg - main6.jpg,
+                     main1_over.jpg - main6_over.jpg, mainmenu1.jpg - mainmenu6.jpg,
+                     printer.jpg, side1.jpg - side6.jpg, sidemenu.jpg,
+-->
+<title>Jackson Electronics Printers</title>
+<link href="je.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function xCoord() {
+   return parseInt(activeMenu.style.left);
+}
+
+function shiftMenu(dx, dy) {
+   xc=parseInt(activeMenu.style.left);
+   yc=parseInt(activeMenu.style.top);
+   activeMenu.style.left=xc+dx+"px";
+   activeMenu.style.top=yc+dy+"px";
+}
+</script>
+
+</head>
+
+<body>
+<div id="logo" style="z-index: 2"><img src="logo.jpg" alt="" /></div>
+
+<!-- Tabbed Menu Titles -->
+<div class="mainTitles" id="mainTitle1" style="left: 10px; top: 28px">
+   <a href="#">
+      <img src="main1.jpg" alt="Computers" />
+   </a>
+</div>
+<div class="mainTitles" id="mainTitle2" style="left: 104px; top: 28px">
+   <a href="#">
+      <img src="main2.jpg" alt="Electronics" />
+   </a>
+</div>
+<div class="mainTitles" id="mainTitle3" style="left: 198px; top: 28px">
+   <a href="#">
+      <img src="main3.jpg" alt="Accessories" />
+   </a>
+</div>
+<div class="mainTitles" id="mainTitle4" style="left: 292px; top: 28px">
+   <a href="#">
+      <img src="main4.jpg" alt="Software" />
+   </a>
+</div>
+<div class="mainTitles" id="mainTitle5" style="left: 386px; top: 28px">
+   <a href="#">
+      <img src="main5.jpg" alt="Services" />
+   </a>
+</div>
+<div class="mainTitles" id="mainTitle6" style="left: 480px; top: 28px">
+   <a href="#">
+      <img src="main6.jpg" alt="Store" />
+   </a>
+</div>
+
+
+<!-- Tabbed Menu Contents -->
+<div class="mainMenus" id="mainMenu1">
+   <img src="mainmenu1.jpg" alt="" />
+</div>
+<div class="mainMenus" id="mainMenu2">
+   <img src="mainmenu2.jpg" alt="" />
+</div>
+<div class="mainMenus" id="mainMenu3">
+   <img src="mainmenu3.jpg" alt="" />
+</div>
+<div class="mainMenus" id="mainMenu4">
+   <img src="mainmenu4.jpg" alt="" />
+</div>
+<div class="mainMenus" id="mainMenu5">
+   <img src="mainmenu5.jpg" alt="" />
+</div>
+<div class="mainMenus" id="mainMenu6">
+   <img src="mainmenu6.jpg" alt="" />
+</div>
+
+
+<!-- Sliding Menu Contents -->
+<div id="sideMenu">
+   <img src="sidemenu.jpg" alt="" usemap="#linkmap" />
+</div>
+
+
+<!-- Submenus of the Sliding Menu -->
+<div id="sideMenu1" class="sideMenus" style="top: 130px; left: 125px">
+   <img src="side1.jpg" alt="" />
+</div>
+<div id="sideMenu2" class="sideMenus" style="top: 160px; left: 125px">
+   <img src="side2.jpg" alt="" />
+</div>
+<div id="sideMenu3" class="sideMenus" style="top: 190px; left: 125px">
+   <img src="side3.jpg" alt="" />
+</div>
+<div id="sideMenu4" class="sideMenus" style="top: 222px; left: 125px">
+   <img src="side4.jpg" alt="" />
+</div>
+<div id="sideMenu5" class="sideMenus" style="top: 252px; left: 125px">
+   <img src="side5.jpg" alt="" />
+</div>
+<div id="sideMenu6" class="sideMenus" style="top: 282px; left: 125px">
+   <img src="side6.jpg" alt="" />
+</div>
+
+
+<!-- Sliding Menu Image Map -->
+<map id="linkmap" name="linkmap">
+   <area shape="rect" coords="5,40,112,58" href="#" />
+   <area shape="rect" coords="5,70,112,88" href="#" />
+   <area shape="rect" coords="5,100,112,118" href="#" />
+   <area shape="rect" coords="5,130,112,148" href="#" />
+   <area shape="rect" coords="5,160,112,178" href="#" />
+   <area shape="rect" coords="5,190,112,208" href="#" />
+</map>
+
+
+
+<!-- Page Content -->
+<div id="main">
+   <h1>Printers</h1>
+   <img src="printer.jpg" alt="" />
+   <p>The best photo prints can now be made ... AT HOME. Introducing the Jackson
+   Electronics' <b>Picture Perfect</b> printer. Darkroom quality prints
+   without the cost, the mess, or the dark.</p>
+   <p>Photo Shopper calls JE's Picture Perfect "<i>the photo printer
+   we've been waiting for: high quality prints at an affordable price.</i>"
+   Photo Review gives it 5 stars, calling it <i>"the outstanding product
+   of the year."</i> As with all of our printers, make sure to choose JE's 
+   archival quality paper and inks, which are guaranteed not to fade. 
+   There is no better way to preserve your family memories than with
+   JE photo products.</p>
+   <p><a href="#">Order</a> the award-winning <b>Picture Perfect</b> printer 
+   today for the special price of <b>$299.95</b> or choose one of the other many 
+   fine printer products from Jackson Electronics.</p>
+</div>
+
+</body>
+</html>

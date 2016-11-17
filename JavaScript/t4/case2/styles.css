@@ -1,0 +1,27 @@
+/*
+   New Perspectives on JavaScript
+   Tutorial 4
+   Case Problem 2
+   Filename: styles.css
+
+   This file contains styles used in the ccc.htm file
+*/
+
+body {background-image: url("back.jpg")}
+
+#panel {width: 300px}
+#panel img {border-bottom: 1px solid red}
+#panel h2 {font-family: Arial, Helvetica, sans-serif; color:blue}
+
+#BOX {background-color:blue; color:white; width:350px; height: 260px;  
+      font-family: Arial, Helvetica, sans-serif; font-size:10pt;
+      border: 5px inset white; padding:0px;
+      overflow:hidden; position:absolute; top:10px; left:350px}
+
+#Text1, #Text2, #Text3, #Text4, #Text5, #Text6 {padding: 5px}
+
+#Text1 {color:yellow; text-align:center; font-size:16pt; width: 350px}
+
+#form_buttons {position: absolute; top: 290px; left: 350px; 
+               width: 350px; text-align: center}
+

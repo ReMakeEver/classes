@@ -1,0 +1,244 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on JavaScript
+   Tutorial 7
+   Case Problem 2
+
+   Expense Report Form
+   Author: Kay Ramirez
+   Date:   3/1/2007
+
+   Filename:         exp.htm
+   Supporting files: back.jpg, exp.css, functions.js, links.jpg, logo.jpg
+-->
+<title>Expense Report</title>
+<link href="exp.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="functions.js"></script>
+
+<script type="text/javascript">
+
+function testLength(field) {
+   if (field.value.length == 0) {
+      field.style.backgroundColor="yellow";
+      return false;
+   } else {
+      field.style.backgroundColor="white";
+      return true;
+   }
+}
+
+function testPattern(field, reg) {
+   if (reg.test(field.value)==false) {
+      field.style.backgroundColor="yellow";
+      field.style.color="red";
+      return false;
+   } else {
+      field.style.backgroundColor="white";
+      field.style.color="black";
+      return true;
+   }
+}
+
+function testDates() {
+   eform = document.expform;
+   dateExists = true;
+
+   for (i=1;i<=4;i++) {
+      if (eform.elements["sub"+i].value != "0.00") {
+         rowDateExists = testLength(eform.elements["date"+i]);
+         if (rowDateExists == false) dateExists = false;
+      }
+   }
+   return dateExists;
+}
+
+function validateForm() {
+   valid = true;
+   eform = document.expform;
+
+   if (testLength(eform.lname)==false) valid=false;
+   if (testLength(eform.fname)==false) valid=false;
+   if (testLength(eform.address)==false) valid=false;
+   if (testLength(eform.summary)==false) valid=false;
+
+   if (testPattern(eform.account,/^ACT\d{6}$/)==false) valid=false;
+   if (testPattern(eform.department,/^DEPT\d{6}$/)==false) valid=false;
+   if (testPattern(eform.project,/^PROJ\d{6}$/)==false) valid=false;
+   if (testPattern(eform.ssn,/^\d{9}$|^\d{3}-\d{2}-\d{4}$/)==false) valid=false;
+
+   if (testDates() == false) valid=false;
+
+   if (valid == false) {
+      alert("Please fill out all required fields in the proper format");
+   }
+
+   return valid;
+}
+
+function calcRow(row) {
+   eform = document.expform;
+
+   travel = parseFloat(eform.elements["travel"+row].value);
+   lodge = parseFloat(eform.elements["lodge"+row].value);
+   meal = parseFloat(eform.elements["meal"+row].value);
+   return travel+lodge+meal;
+}
+
+function calcTotal() {
+   totalexp=0;
+   for (i=1;i<=4;i++) {
+      totalexp += calcRow(i);
+   }
+   return totalexp;
+}
+
+function update(expense) {
+   eform = document.expform;
+   numRegExp = /^\d*(\.\d{0,2})?$/;
+
+   if (numRegExp.test(expense.value)) {
+      expense.value=toFixed2(parseFloat(expense.value));
+      for (i=1; i<=4; i++) {
+         eform.elements["sub"+i].value=toFixed2(calcRow(i));
+      }
+      eform.elements["total"].value=toFixed2(calcTotal());
+   } else {
+      alert("Invalid currency value");
+      expense.value="0.00";
+      expense.focus();
+  }
+}
+
+</script>
+</head>
+
+<body>
+<div id="links"><img src="links.jpg" alt="" /></div>
+<div id="main">
+<p><img src="logo.jpg" alt="DeLong Enterprises" /></p>
+<form name="expform" id="expform" method="post" action="done.htm" onsubmit="return validateForm()">
+
+<table cellspacing="2">
+<tr>
+   <th colspan="5" id="reporttitle">Travel Expense Report</th>
+</tr>
+<tr>
+   <th>Name (Last)<span>*</span></th>
+   <th>(First)<span>*</span></th>
+   <th>(Initial)</th>
+   <th>Account<span>*</span></th>
+   <td><input name="account" id="account" /></td>
+</tr>
+<tr>
+   <td><input name="lname" id="lname"/></td>
+   <td><input name="fname" id="fname"/></td>
+   <td><input name="init" id="init"/></td>
+   <th>Department<span>*</span></th>
+   <td><input name="department" id="department" /></td>
+</tr>
+<tr>
+   <th>Social Security Number<span>*</span></th>
+   <td colspan="2"><input name="ssn" id="ssn" /></td>
+   <th>Project<span>*</span></th>
+   <td><input name="project" id="project" /></td>
+</tr>
+</table>
+
+<table cellspacing="2">
+<tr>
+   <th>Send Check to:<span>*</span></th>
+   <th>Trip Summary<span>*</span></th>
+</tr>
+<tr>
+   <td>
+      <textarea id="address" name="address"></textarea>
+   </td>
+   <td>
+      <textarea id="summary" name="summary"></textarea>
+   </td>
+</tr>
+</table>
+
+<table id="traveltable" cellspacing="2">
+<tr>
+   <th id="datehead">Travel Date<span>*</span></th>
+   <th id="travelexphead">Travel Cost</th>
+   <th id="traveltypehead">Type</th>
+   <th id="lodgeexphead">Lodging</th>
+   <th id="mealexphead">Meals</th>
+   <th id="subhead">Total</th>
+</tr>
+<tr>
+   <td><input name="date1" id="date1" /></td>
+   <td><input name="travel1" id="travel1" value="0.00" onblur="update(this)" /></td>
+   <td><select name="traveltype1" id="traveltype1">
+       <option>air</option>
+       <option>auto</option>
+       <option>taxi</option>
+       <option>train</option>
+       </select>
+   </td>
+   <td><input name="lodge1" id="lodge1" value="0.00" onblur="update(this)" /></td>
+   <td><input name="meal1" id="meal1" value="0.00" onblur="update(this)" /></td>
+   <td><input name="sub1" id="sub1" value="0.00" readonly="readonly" /></td>
+</tr>
+<tr>
+   <td><input name="date2" id="date2" /></td>
+   <td><input name="travel2" id="travel2" value="0.00" onblur="update(this)" /></td>
+   <td><select name="traveltype2" id="traveltype2">
+       <option>air</option>
+       <option>auto</option>
+       <option>taxi</option>
+       <option>train</option>
+       </select>
+   </td>
+   <td><input name="lodge2" id="lodge2" value="0.00" onblur="update(this)" /></td>
+   <td><input name="meal2" id="meal2" value="0.00" onblur="update(this)" /></td>
+   <td><input name="sub2" id="sub2" value="0.00" readonly="readonly" /></td>
+</tr>
+<tr>
+   <td><input name="date3" id="date3" /></td>
+   <td><input name="travel3" id="travel3" value="0.00" onblur="update(this)" /></td>
+   <td><select name="traveltype3" id="traveltype3">
+       <option>air</option>
+       <option>auto</option>
+       <option>taxi</option>
+       <option>train</option>
+       </select>
+   </td>
+   <td><input name="lodge3" id="lodge3" value="0.00" onblur="update(this)" /></td>
+   <td><input name="meal3" id="meal3" value="0.00" onblur="update(this)" /></td>
+   <td><input name="sub3" id="sub3" value="0.00" readonly="readonly" /></td>
+</tr>
+<tr>
+   <td><input name="date4" id="date4" /></td>
+   <td><input name="travel4" id="travel4" value="0.00" onblur="update(this)" /></td>
+   <td><select name="traveltype4" id="traveltype4">
+       <option>air</option>
+       <option>auto</option>
+       <option>taxi</option>
+       <option>train</option>
+       </select>
+   </td>
+   <td><input name="lodge4" id="lodge4" value="0.00" onblur="update(this)" /></td>
+   <td><input name="meal4" id="meal4" value="0.00" onblur="update(this)" /></td>
+   <td><input name="sub4" id="sub4" value="0.00" readonly="readonly" /></td>
+</tr>
+<tr>
+   <th colspan="5" id="totalhead">TOTAL</th>
+   <td><input id="total" name="total" readonly="readonly" value="0.00" /></td>
+</tr>
+<tr>
+   <td colspan="6"><span>* - Indicates a required field</span></td>
+</tr>
+</table>
+
+<p id="psub">
+   <input type="submit" value="Submit Report" />
+</p>
+
+</form>
+</div>
+</body>
+</html>

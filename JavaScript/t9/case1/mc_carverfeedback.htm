@@ -1,0 +1,47 @@
+<html>
+<head>
+<!-- 
+	New Perspectives on JavaScript
+	Tutorial 9
+	Tutorial Case 1
+	
+	McCarver Philanthropic Donation Page
+	Author: Steve Phelps
+	Date: 10/06/2009
+	
+	Filename:		mc_carverfeedback.htm
+	Supporting files:	mc_carver.gif, mc_carver.js, mc_carver.css,
+				mc_carver.htm
+	
+-->
+
+<script language="JavaScript" src="mc_carver.js"></script>
+<link rel="stylesheet" type="text/css" href="mc_carver.css" />
+<title>McCarver Feedback Page</title>
+</head>
+
+<body>
+<img src="mc_carver.gif" alt="McCarver image" />
+<br />
+<div id="confirm">
+
+<p>Thank you, <b><script type="text/javascript">document.write(d1);</script></b>, for your generous donation of <b>$<script type="text/javascript">document.write(d4);</script></b> to <b><script type="text/javascript">document.write(d5);</script></b>. We greatly appreciate your generosity.</p>
+
+<p>We will contact you at <b><script type="text/javascript">document.write(d3);</script></b> when your donation has been received by <b><script type="text/javascript">document.write(d5);</script></b>. We will also mail you a receipt for your records at <b><script type="text/javascript">document.write(d2);</script></b>.</p>
+
+<p>If any of the above information is incorrect, please click on the "Return To Form" button below. Otherwise, click on the "Confirm Donation" button to authorize your gift.</p>
+
+<div align="center">
+<form>
+<table>
+	<tr>
+		<td><input type="submit" value="Confirm Donation"  /></td>
+		<td><input type="reset" value="Return To Form" onclick="window.location='mc_carver.htm'" /></td>
+	</tr>
+</table>
+</form>
+</div>
+
+</div>
+</body>
+</html>

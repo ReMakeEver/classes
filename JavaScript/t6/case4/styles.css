@@ -1,0 +1,24 @@
+/*
+   New Perspectives on JavaScript
+   Tutorial 6
+   Case Problem 4
+   Filename: allen.css
+
+   This file contains styles used in the allen.htm file
+
+*/
+
+      h1 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 14px;
+        color: #996600;
+        font-style: italic;
+        font-weight: bold;
+      }
+      p {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 14px;
+      }
+      body {
+        background-color:FFFFCC;
+      }

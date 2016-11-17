@@ -1,0 +1,119 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on JavaScript
+   Tutorial 8
+   Case Problem 2
+
+   Badger Aviation
+   Author: Wayne Statz
+   Date:   3/1/2007
+
+   Filename:         badger.htm
+   Supporting files: back.jpg, bar.jpg, corner.jpg, functions.js
+                     image0.jpg-image9.jpg, links.jpg, logo.jpg, styles.css
+-->
+<title>Badger Aviation</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="functions.js"></script>
+<script type="text/javascript">
+var slide=new Array();
+for (i=0;i<=9;i++) {
+   slide[i]=new Image();
+   slide[i].src="image"+i+".jpg";
+}
+
+var IE = document.attachEvent ? true:false;
+var DOM = document.addEventListener ? true: false;
+
+function applyEventF(obj,ename,fname,cap) {
+   if (IE) obj.attachEvent("on"+ename, fname);
+   else if (DOM) obj.addEventListener(ename,fname,cap);
+}
+
+function removeEventF(obj,ename,fname,cap) {
+   if (IE) obj.detachEvent("on"+ename, fname);
+   else if (DOM) obj.removeEventListener(ename,fname,cap);
+}
+
+function eventPositionX(e) {
+   if (IE) return event.clientX;
+   else if (DOM) return e.clientX;
+}
+
+function getKeyCode(e) {
+   if (IE) return event.keyCode;
+   else if (DOM) return e.keyCode;
+}
+
+function setup() {
+   scrollbutton = document.getElementById("button");
+   scrollbutton.onmousedown=grabIt;
+   document.onselectstart=stopSelect;
+   document.onkeydown=keyShow;
+}
+
+function keyShow(e) {
+   key = getKeyCode(e);
+   buttonposX=getXCoord(scrollbutton);
+   if (key==37) buttonposX-=31;
+   if (key==39) buttonposX+=31;
+   if (buttonposX < 20) buttonposX=20;
+   if (buttonposX > 299) buttonposX=299;
+   placeIt(scrollbutton, buttonposX,6);
+   showImage(buttonposX);
+}
+
+function stopSelect() {
+   return false;
+}
+
+function grabIt(e) {
+   mouseX=eventPositionX(e);
+   diffX=mouseX-getXCoord(scrollbutton);
+
+   applyEventF(scrollbutton,"mousemove",moveIt,false);
+   applyEventF(scrollbutton,"mouseup",dropIt,false);
+}
+
+function moveIt(e) {
+   mouseX=eventPositionX(e);
+   buttonposX = mouseX-diffX;
+   if (buttonposX < 20) buttonposX=20;
+   if (buttonposX > 299) buttonposX=299;
+   placeIt(scrollbutton, buttonposX, 6);
+   showImage(buttonposX);
+}
+
+function dropIt(e) {
+   removeEventF(scrollbutton,"mousemove",moveIt,false);
+}
+
+function showImage(x) {
+   i = Math.floor((x-20)/31);
+   document.images["photo"].src=slide[i].src;
+}
+
+</script>
+
+</head>
+<body onload="setup()">
+<div id="logo"><img src="logo.jpg" alt="Badger Aviation" /></div>
+<div id="corner"><img src="corner.jpg" alt="" /></div>
+<div id="links"><img src="links.jpg" alt="" /></div>
+<div id="title"><h1>Flight Photos</h1></div>
+<div id="photos"><img id="photo" name="photo" src="image0.jpg" alt="" /></div>
+
+<div id="bar" style="position:absolute; top: 450px; left:180px; width: 368px; height: 41px">
+<div id="button" style="position: absolute; top: 6px; left: 20px; width: 50px; height:22px; cursor: pointer">
+   &nbsp;
+</div>
+</div>
+
+<div id="message">See photos from one of our popular
+                  Dane County tours. Scroll through the slideshow 
+                  using your mouse or the right and left arrows on 
+                  your keyboard.
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on JavaScript
+   Tutorial 4
+   Case Problem 1
+
+   The Golf Page
+   Author: Mark Reim
+   Date:   8/1/2006
+
+   Filename:         golfpage.htm
+   Supporting files: ball.gif, clouds.jpg, golf.js, golfer.gif, styles.css
+-->
+<title>The Golf Page</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<script src="golf.js" type="text/javascript"></script>
+<script type="text/javascript">
+var x = new Array(-395, -389, -383, -377, -371, -365, -359, -353, -346, 
+-340, -334, -328, -322, -316, -310, -304, -297, -291, -285, -279, -273, 
+-267, -261, -255, -248, -242, -236, -230, -224, -218, -212, -206, -199, 
+-193, -187, -181, -175, -169, -163, -157, -150, -144, -138, -132, -126, 
+-120, -114, -108, -101, -95, -93, -91, -88, -86, -83, -81, -78, -76, -73, 
+-71, -69, -66, -64, -61, -59, -56, -54, -51, -49, -47, -44, -42, -39, -37, 
+-34, -32, -29, -27, -24, -22, -20, -17, -15, -12, -10, -7, -5, -2, 0);
+
+var y = new Array(-300, -300, -300, -299, -298, -297, -296, -294, -292, 
+-290, -288, -285, -282, -279, -276, -272, -268, -264, -260, -255, -250, 
+-245, -240, -234, -228, -222, -216, -209, -202, -195, -188, -180, -172, 
+-164, -156, -147, -138, -129, -120, -110, -100, -90, -80, -69, -58, -47, 
+-36, -24, -12, 0, -5, -10, -14, -18, -22, -25, -29, -32, -34, -37, -39, 
+-41, -43, -45, -46, -47, -48, -48, -48, -48, -48, -48, -47, -46, -45, -43, 
+-42, -40, -37, -35, -32, -29, -26, -23, -19, -15, -11, -6, 0);
+
+var index=0;
+
+function moveBall() {
+   if (index <= x.length-1) {
+      placeIt("Ball",x[index], y[index]);
+      index++;
+      setTimeout("moveBall()", 5);
+   } else {
+      setFontSize("slogan", 0);
+      showIt("slogan");
+      growText();
+   }
+}
+
+function growText() {
+   var fs=getFontSize("slogan");
+   if (fs <= 20) {
+      changeFontSize("slogan",1);
+      setTimeout("growText()", 20);
+   }
+}
+</script>
+</head>
+<body onload="moveBall()">
+
+<div id="Golfer" ><img src="golfer.gif" width="40px" alt="" /></div>
+<div id="Title">
+THE G<span id="Ball"><img src="ball.gif" alt="O" /></span>LF PAGE
+</div>
+
+<div id="box" 
+     style="">
+<span id="slogan">
+   Your Online Source of Golf Equipment
+</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on JavaScript
+   Tutorial 4
+   Case Problem 3
+
+   Heart of the Rocks Trail
+   Author: Jared Nunn
+   Date:   4/9/2015
+
+   Filename:         trail.htm
+   Supporting files: photo2.gif-photo8.gif, redball.gif, text1.gif-text9.gif,
+                     trail.css, trail.gif, trail.js
+-->
+<title>Heart of Rocks Trail</title>
+<link href="trail.css" rel="stylesheet" type="text/css" />
+<script src="trail.js" type="text/javascript"></script>
+<script type="text/JavaScript">
+
+  var xArray = new Array(304,306,310,314,318,323,327,330,332,333,334,335,336,
+     336,335,333,330,327,324,322,321,322,325,328,331,334,337,339,340,338,337,
+     338,339,340,342,343,345,347,349,351,353,355,358,361,365,368,373,378,384,
+     391,397,404,411,418,426,434,442,451,458,465,472,479,484,490,499,504,505,
+     506,507,507,502,497,492,486,480,474,468,462,457,453,450,447,443,438,433,
+     429,424,418,413,408,404,400,396,389,386,381,379,378,378,377,377,364,342,
+     336,330,323,316,309,301,293,285,277,270,263,257,251,245,236,230,224,219,
+     213,209,204,200,196,191,187,182,177,172,166,162,159,155,152,148,143,137,
+     130,123,116,110,103,97,93,93,94,94,93,91,88,85,81,78,75,73,72,75,80,85,
+     90,95,99,103,108,112,116,120,122,123,122,121,119,118,118,121,126,129,132,
+     135,140,146,154,163,172,180,185,188,192,198,204,210,212,215,225,230,236,
+     242,248,255,262,270,278,286,293,300,306,312,317,322,330,334,336,337,337,
+     338,338,339,339,339,339,335,330,328,325,323,321,324,330,337,344,352,360,
+     367,373,379,384,385,385,391,397,405,412,421,430,438,445,452,457,462,464,
+     467,471,475,480,486,491,498,504,510,516,521,525,529,527,527,532,537,543);
+
+  var yArray = new Array(438,432,426,422,419,415,410,405,400,395,389,382,375,
+     367,359,354,350,345,341,336,330,325,320,315,310,305,301,296,290,285,279,
+     271,266,260,254,248,241,234,226,220,213,207,202,197,192,189,187,185,184,
+     183,182,182,182,182,182,182,183,183,183,183,184,184,183,183,181,179,175,
+     170,164,157,151,149,147,146,145,143,142,139,135,131,126,122,117,113,110,
+     107,104,102,99,97,95,93,91,87,84,80,78,77,76,76,75,71,67,66,66,65,64,63,
+     63,62,61,61,60,59,58,58,57,56,55,54,52,49,46,43,39,35,31,27,24,21,19,20,
+     23,27,31,35,39,41,42,42,41,40,39,39,41,47,54,61,68,75,80,85,90,95,100,
+     105,110,115,120,122,124,126,127,130,133,137,141,145,150,155,161,168,174,
+     180,185,190,196,198,203,209,212,216,218,219,218,218,219,222,226,229,229,
+     229,229,234,238,241,241,242,242,242,242,242,242,242,242,242,242,242,243,
+     243,243,250,250,255,260,266,273,280,288,295,301,307,313,316,321,326,332,
+     339,346,348,348,348,348,348,348,348,349,353,358,363,366,367,367,366,365,
+     365,364,364,365,367,369,372,375,379,382,385,387,390,393,396,399,402,405,
+     408,416,422,428,433,436,439);
+
+  var index = 1;
+
+  function hideAll() {
+    hideIt("text1");
+    hideIt("text2");
+    hideIt("text3");
+    hideIt("text4");
+    hideIt("text5");
+    hideIt("text6");
+    hideIt("text7");
+    hideIt("text8");
+    hideIt("text9");
+    hideIt("photo2");
+    hideIt("photo3");
+    hideIt("photo4");
+    hideIt("photo5");
+    hideIt("photo6");
+    hideIt("photo7");
+    hideIt("photo8");
+  }
+
+  function describeIt(text, photo) {
+     showIt(text);
+     if (document.getElementById(photo)) showIt(photo);
+  }
+
+   function runPath() {
+      hideAll();
+      index++;
+      placeIt("redBall", xArray[index], yArray[index]);
+
+      switch (index) {
+         case 0: describeIt("text1");break;
+         case 16: describeIt("text2","photo2");break;
+         case 68: describeIt("text3","photo3");break;
+         case 82: describeIt("text4","photo4");break;
+         case 97: describeIt("text5","photo5");break;
+         case 130: describeIt("text6","photo6");break;
+         case 188: describeIt("text7","photo7");break;
+         case 231: describeIt("text8","photo8");break;
+         case 269: describeIt("text9");index=0; setTimeout("location.reload()", 7000);break;
+         default: setTimeout("runPath()", 100);
+       }
+  }
+
+</script>
+</head>
+
+<body>
+
+<div id="trail">
+   <img src="trail.gif" width="650" height="490" alt="Heart of Rocks Trail" />
+</div>
+
+<div id="redBall">
+   <a href="javascript:runPath()"><img src="redball.gif" alt="Click to follow trail" /></a>
+</div>
+
+
+<!-- Text and Photos for landmarks on the map -->
+<div id="text1">
+   <img src="text1.gif" alt="A Welcome Message" />
+</div>
+
+
+<div id="text2">
+   <img src="text2.gif" alt="The Big Balanced Rock" />
+</div>
+<div id="photo2">
+   <img src="photo2.jpg" width="200" height="155" alt="Big Balanced Rock" />
+</div>
+
+
+<div id="text3">
+   <img src="text3.gif" alt="Duck on a Rock" />
+</div>
+<div id="photo3">
+   <img src="photo3.jpg" width="200" height="155" alt="Duck on a Rock" />
+</div>
+
+
+<div id="text4">
+   <img src="text4.gif" alt="The Camels Head" />
+</div>
+<div id="photo4">
+   <img src="photo4.jpg" width="200" height="155" alt="Camels Head" />
+</div>
+
+
+<div id="text5">
+   <img src="text5.gif" alt="Punch and Judy" />
+</div>
+<div id="photo5">
+   <img src="photo5.jpg" width="200" height="155" alt="Punch and Judy" />
+</div>
+
+
+<div id="text6">
+   <img src="text6.gif" alt="Thors Hammer" />
+</div>
+<div id="photo6">
+   <img src="photo6.jpg" width="200" height="155" alt="Thors Hammer" />
+</div>
+
+
+<div id="text7">
+   <img src="text7.gif" alt="The Pinnacle Balanced Rock" />
+</div>
+<div id="photo7">
+   <img src="photo7.jpg" width="125" height="200" alt="Pinnacle Balanced Rock" />
+</div>
+
+
+<div id="text8">
+   <img src="text8.gif" alt="The Balanced Rock" />
+</div>
+<div id="photo8">
+   <img src="photo8.jpg" width="200" height="155" alt="Big Balanced Rock" />
+</div>
+
+
+<div id="text9">
+   <img src="text9.gif" alt="A Short Exit Message" />
+</div>
+
+</body>
+</html>

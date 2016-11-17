@@ -1,0 +1,93 @@
+<html>
+<head>
+<!-- 
+	New Perspectives on JavaScript
+	Tutorial 9
+	Case 2
+	
+	Merchant's Market
+	Author: Vernon Jones
+	Date: 3/28/2008
+	
+	Filename:		merchant.htm
+	Supporting files:	merchant.css, merchant_acct.htm, merchant_info.htm,
+				merchant.js
+	
+-->
+
+<script type="text/javascript" src="merchant.js"></script>
+<link rel="stylesheet" type="text/css" href="merchant.css" />
+<title>Merchants Market</title>
+</head>
+
+<body onload="checkAcct()">
+<img src="merchants.gif" alt="" />
+<h2>Account Processing Page</h2>
+<div id="registration_form">
+Please complete all of the fields below.<br />
+If you have already registered, please login in the window to left.
+<br />
+<form name="market" action="merchant_acct.htm" onsubmit="return handleAll()" method="post">
+<table>
+	<tr>
+		<td align="right">First Name:</td>
+		<td><input name="first" size="25" /></td>
+	</tr>
+	<tr>
+		<td align="right">Last Name:</td>
+		<td><input name="last" size="25" /></td>
+	</tr>
+	<tr>
+		<td align="right">E-Mail Address:</td>
+		<td><input name="em" size="35" /></td>
+	</tr>
+	<tr>
+		<td align="right">Checking Account Number:</td>
+		<td><input name="acct_num" size="16" maxlength="16"/></td>
+	</tr>
+	<tr>
+		<td align="right">Routing Number:</td>
+		<td><input name="r_num" size="9" maxlength="9"/></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center"><input type="submit" value="Process Request" />
+			<input type="reset" value="Clear Form" />
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+
+<div id="login_form">
+Already registered?<br />
+Log in here:<br />
+<form name="login" action="merchant_acct.htm" method="post">
+<table>
+	<tr>
+		<td>Username:</td>
+	</tr>
+	<tr>
+		<td><input name="user" size="25" /></td>
+	</tr>
+	<tr>
+		<td>Password:</td>
+	</tr>
+	<tr>
+		<td><input type="password" name="pass" size="25" /></td>
+	</tr>
+	<tr>
+		<td>Confirm Password:</td>
+	</tr>
+	<tr>
+		<td><input type="password" name="pass2" size="25" /></td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Submit" /></td>
+	</tr>
+</table>
+</form>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on JavaScript
+   Tutorial 10
+   Case Problem 3
+
+   The Lighthouse
+   Author: 
+   Date:   
+
+   Filename:         clist.htm
+   Supporting files: data.js, lhouse.css, logo.jpg, newdata.js
+
+-->
+<title>The Lighthouse</title>
+<link href="lhouse.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<form name="donations" id="donations" action="">
+<div id="title">
+   <img src="logo.jpg" alt="The Lighthouse" />
+   The Lighthouse<br />
+   543 Oak Street<br />
+   Delphi, KY &nbsp;&nbsp;89011<br/>
+   (542) 555-7511
+</div>
+
+<div id="data_entry">
+   <table>
+   <tr>
+      <td>Contributors</td>
+      <td id="totalContr"></td>
+   </tr>
+   <tr>
+      <td>Total</td>
+      <td id="totalAmt"></td>
+   </tr>
+   </table>
+
+   <table>
+   <tr><td colspan="2"><h3>Enter a New Contributor</h3></td></tr>
+   <tr>
+      <td>First Name</td><td><input name="fname" id="fname" /></td>
+   </tr>
+   <tr>
+      <td>Last Name</td><td><input name="lname" id="lname" /></td>
+   </tr>
+   <tr>
+      <td>Street</td><td><input name="street" id="street" /></td>
+   </tr>
+   <tr>
+      <td>City</td><td><input name="city" id="city" /></td>
+   </tr>
+   <tr>
+      <td>State</td>
+      <td><select name="state" id="state">
+      <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
+      <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
+      <option>DC</option><option>FL</option><option>GA</option><option>HI</option>
+      <option>ID</option><option>IL</option><option>IN</option><option>IA</option>
+      <option>KS</option><option>KY</option><option>LA</option><option>ME</option>
+      <option>MD</option><option>MA</option><option>MI</option><option>MN</option>
+      <option>MS</option><option>MO</option><option>MT</option><option>NE</option>
+      <option>NV</option><option>NH</option><option>NJ</option><option>NM</option>
+      <option>NY</option><option>NC</option><option>ND</option><option>OH</option>
+      <option>OK</option><option>OR</option><option>PA</option><option>RI</option>
+      <option>SC</option><option>SD</option><option>TN</option><option>TX</option>
+      <option>UT</option><option>VT</option><option>VA</option><option>WA</option>
+      <option>WV</option><option>WI</option><option>WY</option>
+      </select>
+      </td>
+   </tr>
+   <tr>
+      <td>Zip</td><td><input name="zip" id="zip" /></td>
+   </tr>
+   <tr>
+      <td>Amount</td><td><input name="amount" id="amount" /></td>
+   </tr>
+   <tr>
+      <td>Date</td><td><input name="date" id="date" /></td>
+   </tr>
+   <tr>
+      <td colspan="2" id="buttoncell1">
+         <input type="button" value="Add Contributor" />
+      </td>
+   </tr>
+   </table>
+</div>
+
+<div id="report">
+   <p><input value="Remove Checked Items" type="button" /></p>
+
+   <table id="ctable">
+   <tr><th colspan="5">Contributor List</th>
+   </tr>
+   <tr id="titleRow">
+      <th>Remove</th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Amount</th>
+   </tr><tr id="emptyRow"><td class="rc"><input type="checkbox" /></td><td></td><td></td><td></td><td class="ac"></td></tr>
+   </table>
+</div>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+<!--
+   New Perspectives on JavaScript
+   Tutorial 9
+   Tutorial Case 3
+   
+   Mollie's Barn Boutique
+   Author: Patti Wicks
+   Date: 10/30/2007
+   
+   Filename:		mollie.htm
+   Supporting files:	mollie_prod.htm, mollie.js, mollie.css,
+   			mollie_1.jpg, mollie_bb.jpg
+
+-->
+
+<script language="JavaScript" src="mollie.js"></script>
+<link rel="stylesheet" type="text/css" href="mollie.css" />
+<title>Mollie's Boutique</title>
+</head>
+
+<body onLoad="deterUser()">
+<div align="center">
+<img src="mollie_bb.jpg" />
+<br />
+
+<div id="login">
+<form name="enter" action="#"  onSubmit="return valUser()" method="post">
+Please Log In:
+<table>
+	<tr>
+		<td class="login">Username:</td>
+	</tr>
+	<tr>
+		<td class="login"><input name="user" size="8" /></td>
+	</tr>
+	<tr>
+		<td class="login">Password:</td>
+	</tr>
+	<tr>
+		<td class="login"><input name="pwd" type="password" size="8" /></td>
+	</tr>
+	<tr>
+		<td class="login">Confirm Password:</td>
+	</tr>
+	<tr>
+		<td class="login"><input name="pwd2" type="password" size="8" /></td>
+	</tr>
+	<tr>
+		<td class="login"><input type="submit" value="Log-In" /></td>
+	</tr>
+</table>
+</div>
+
+<img src="mollie_1.jpg" border="0" /><br />
+<div id="intro_text">
+Looking for that special novelty?<br>
+Come on in and see what's waiting inside!
+<br />
+<div id="first">
+To enter, complete the form above and then click on the Log-In button.
+</div> 
+<input type="submit" id="button" value="Enter Here"/>
+</form>
+</div>
+</div>
+
+</body>
+</html>

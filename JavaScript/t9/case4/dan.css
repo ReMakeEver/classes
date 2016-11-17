@@ -1,0 +1,62 @@
+/*
+   New Perspectives on JavaScript
+   Tutorial 9
+   Tutorial Case 4
+   Filename: dan.css
+   
+   This file contains styles used in the dan_cart.htm and dan.htm files.
+	
+*/
+body
+	{
+		font-family:"comic sans ms";
+		color:rgb(102,77,30);
+		font-size:14px;
+	}
+#intro
+	{
+		width:600px;
+		margin-left:20px;
+	}
+#item1
+	{
+		position:absolute;
+		top:120px;
+		left:60px;
+		border:solid 1px #664e1e;
+		padding:5px;
+		width:300px;
+		height:280px;
+	}
+#item2
+	{
+		position:absolute;
+		top:120px;
+		left:400px;
+		border:solid 1px #664e1e;
+		padding:5px;
+		width:300px;
+		height:280px;
+	}
+#showcart
+	{
+		position:absolute;
+		top:120px;
+		left:100px;
+		padding:5px;
+		width:300px;
+		height:280px;
+	}
+a:link
+	{
+		color:#664e1e;
+	}
+a:visited
+	{
+		color:#664e1e;
+	}
+a:hover
+	{
+		color:#664e1e;
+		text-decoration:none;
+	}

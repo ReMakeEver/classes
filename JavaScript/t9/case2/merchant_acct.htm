@@ -1,0 +1,60 @@
+<html>
+<head>
+<!-- 
+	New Perspectives on JavaScript
+	Tutorial 9
+	Case 2
+	
+	Merchant's Market
+	Author: Vernon Jones
+	Date: 3/28/2008
+	
+	Filename:		merchant_acct.htm
+	Supporting files:	merchant.css, merchant.htm, merchant.js
+	
+-->
+
+<script type="text/javascript" src="merchant.js"></script>
+<link rel="stylesheet" type="text/css" href="merchant.css" />
+<title>Merchants Market - Account</title>
+</head>
+
+<body>
+<img src="merchants.gif" alt="" />
+<h2>Account Verification Page</h2>
+<div id="form1">
+
+<form name="feedback" action="merchant_thanks.htm" method="post">
+<table>
+	<tr>
+		<td align="right" class="table_text">First Name:</td>
+		<td class="table_text"><script type="text/javascript">document.write("<input name='first' value="+first+" id='first' />")</script></td>
+	<tr>
+	</tr>
+		<td align="right" class="table_text">Last Name:</td>
+		<td class="table_text"><script type="text/javascript">document.write("<input name='first' value="+last+" id='last' />")</script></td>
+	</tr>
+	<tr>
+		<td align="right" class="table_text">E-Mail Address:</td>
+		<td class="table_text"><script type="text/javascript">document.write("<input name='first' value="+em+" id='em' />")</script></td>
+	</tr>
+	<tr>
+		<td align="right" class="table_text">Checking Account Number:</td>
+		<td class="table_text"><script type="text/javascript">document.write("<input name='first' value="+acct_num+" id='acct_num' />")</script></td>
+	</tr>
+	<tr>
+		<td align="right" class="table_text">Routing Number:</td>
+		<td class="table_text"><script type="text/javascript">document.write("<input name='first' value="+r_num+" id='r_num' />")</script></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+		<input type="submit" value="Submit Request" />
+		<input type="button" value="Return To Form" onclick="window.location='merchant.htm'"/>
+		</td>
+	</tr>
+</table>
+</form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/*
+   New Perspectives on JavaScript
+   Tutorial 9
+   Tutorial Case 3
+   Filename: mollie.css
+   
+   This file contains styles used in the mollie.htm and mollie_prod.htm
+   files.
+   
+*/
+
+body
+	{
+		background-color:#fae0a0;
+		font-family:"comic sans ms";
+		font-size:12px;
+		color:#420b0b
+	}
+#button
+	{
+		background-color:#420b0b;
+		color:#fae0a0;
+		visibility:hidden;
+	}
+A:link
+	{
+		color:#420b0b;
+	}
+A:visited
+	{
+		color:#420b0b;
+	}
+A:active
+	{
+		color:#420b0b;
+	}
+#first
+	{
+		visibility:visible
+	}
+#intro
+	{
+		position:absolute;
+		top:150px;
+		left:18px;
+		width:230px;
+		font-size:125%;
+	}
+#intro_text
+	{
+		font-size:130%;
+	}
+#login
+	{
+		position:absolute;
+		top:15%;
+		left:18%;
+		border:solid 1px #420b0b;
+		padding:1px;
+		width:15%;
+		visiblity:visible;
+	}
+.login
+	{
+		font-size:75%;
+		text-align:center;
+	}
+#sales
+	{
+		position:absolute;
+		top:130px;
+		left:500px;
+	}
+#stuff
+	{
+		position:absolute;
+		top:140px;
+		left:300px;
+		width:200px;
+		font-size:130%;
+	}
+.outline
+	{
+		border-style:solid;
+		border-color:#420b0b;
+		padding:5px;
+	}

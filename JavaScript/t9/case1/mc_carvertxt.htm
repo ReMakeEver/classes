@@ -1,0 +1,70 @@
+<html>
+<head>
+<!-- 
+	New Perspectives on JavaScript
+	Tutorial 9
+	Case 1
+	
+	McCarver Philanthropic Donation Page
+	Author:
+	Date:
+	
+	Filename:		mc_carver.htm
+	Supporting files:	mc_carver.gif, mc_carver.js, mc_carver.css,
+				mc_carverfeedback.htm
+	
+-->
+
+<script language="JavaScript" src="mc_carver.js"></script>
+<link rel="stylesheet" type="text/css" href="mc_carver.css" />
+<title>McCarver Donation Page</title>
+</head>
+
+<body>
+<div align="center">
+<img src="mc_carver.gif" alt="McCarver image" />
+</div>
+
+<div id="layout">
+On behalf of the entire McCarver family, thank you for taking the time to make donation to one of our charitable endeavors.
+
+<form name="charity" action="mc_carverfeedback.htm" onSubmit="return sendForm()" method="post">
+
+<table width="80%" align="center">
+	<tr>
+		<td align="right">Full Name:</td>
+		<td><input name="name1" size="25"  /></td>
+	</tr>
+	<tr>
+		<td align="right">Mailing Address:</td>
+		<td><input name="add1" size="35"  /></td>
+	</tr>
+	<tr>
+		<td align="right">E-Mail Address:</td>
+		<td><input name="em1" size="25"  /></td>
+	</tr>
+	<tr>
+		<td align="right">Today's Donation:</td>
+		<td><input name="money"  size="4"  /></td>
+	</tr>
+	<tr>
+		<td align="right">Please donate the full amount of my donation to:</td>
+		<td><select name="donate">
+			<option value="Children's Hospice">Children's Hospice</option>
+			<option value="Elder Care">Elder Care</option>
+			<option value="Feed The Hungry">Feed The Hungary</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center"><input type="submit" value="Send Donation"  />
+			<input type="reset" value="Clear Form"  />
+		</td>
+	</tr>
+</table>
+
+</form>
+
+</div>
+</body>
+</html>

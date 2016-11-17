@@ -1,0 +1,77 @@
+/*
+   New Perspectives on JavaScript
+   Tutorial 8
+   Case Problem 3
+   Filename: styles.css
+
+   This file contains styles used in the cross.htm file.
+
+*/
+
+body {background: white; font-family: Arial, Helvetica, sans-serif;
+      margin: 0px}
+#head {width: 100%; background-color: rgb(81,70,50)}
+#head img {margin-left: 75px}
+#intro {position: absolute; top: 110px; left:0px; width: 250px; padding-left: 10px}
+#intro h2 {color: rgb(142,119,85); margin-bottom: 0px; letter-spacing: 3; font-size: 16pt}
+#intro p {margin-top: 10px; margin-bottom: 0px;font-size: 9pt}
+
+#direction {position:absolute; top:130px; left:270px}
+
+#grid00 {position: absolute; top: 130px; left: 330px}
+#grid10 {position: absolute; top: 130px; left: 365px}
+#grid20 {position: absolute; top: 130px; left: 400px}
+#grid30 {position: absolute; top: 130px; left: 435px}
+#grid40 {position: absolute; top: 130px; left: 470px}
+
+#grid01 {position: absolute; top: 165px; left: 330px}
+#grid11 {position: absolute; top: 165px; left: 365px}
+#grid21 {position: absolute; top: 165px; left: 400px}
+#grid31 {position: absolute; top: 165px; left: 435px}
+#grid41 {position: absolute; top: 165px; left: 470px}
+
+#grid02 {position: absolute; top: 200px; left: 330px}
+#grid12 {position: absolute; top: 200px; left: 365px}
+#grid22 {position: absolute; top: 200px; left: 400px}
+#grid32 {position: absolute; top: 200px; left: 435px}
+#grid42 {position: absolute; top: 200px; left: 470px}
+
+#grid03 {position: absolute; top: 235px; left: 330px}
+#grid13 {position: absolute; top: 235px; left: 365px}
+#grid23 {position: absolute; top: 235px; left: 400px}
+#grid33 {position: absolute; top: 235px; left: 435px}
+#grid43 {position: absolute; top: 235px; left: 470px}
+
+#grid04 {position: absolute; top: 270px; left: 330px}
+#grid14 {position: absolute; top: 270px; left: 365px}
+#grid24 {position: absolute; top: 270px; left: 400px}
+#grid34 {position: absolute; top: 270px; left: 435px}
+#grid44 {position: absolute; top: 270px; left: 470px}
+
+.grid {position:absolute; font-weight:bold; color:red; border:thin solid red; width:30px;
+       background-color:white; height:30px; text-align:center}
+
+#reveal {position:absolute; width:170px; top: 310px; left: 330px; text-align: center;
+         background-color: rgb(239,230,215); color: rgb(82,69,54); letter-spacing: 2;
+         border-style: outset; border-width: 5px; font-size: 9pt; padding: 2px}
+
+#rowhead {position: absolute; top: 360px; left: 115px; color: rgb(43,36,28);
+          font-size: 12pt; letter-spacing: 2; width: 100px; font-weight: bold}
+
+#colhead {position: absolute; top: 360px; left: 305px; color: rgb(43,36,28);
+          font-size: 12pt; letter-spacing: 2; width: 100px; font-weight: bold}
+
+#across1 {position: absolute; top: 380px; left: 115px}
+#across2 {position: absolute; top: 400px; left: 115px}
+#across3 {position: absolute; top: 420px; left: 115px}
+#across4 {position: absolute; top: 440px; left: 115px}
+#across5 {position: absolute; top: 460px; left: 115px}
+
+#down1 {position: absolute; top: 380px; left: 305px}
+#down2 {position: absolute; top: 400px; left: 305px}
+#down3 {position: absolute; top: 420px; left: 305px}
+#down4 {position: absolute; top: 440px; left: 305px}
+#down5 {position: absolute; top: 460px; left: 305px}
+
+.clue {font-size: 10pt}
+

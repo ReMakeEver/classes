@@ -1,0 +1,153 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on JavaScript
+   Tutorial 8
+   Case Problem 1
+
+   Consumer Survey
+   Author: Derek Mahnaz
+   Date:   3/1/2007
+
+   Filename:         survey.htm
+   Supporting files: bkgrnd.jpg, links.jpg, logo.jpg, styles.css
+                     survey.js
+-->
+<title>Consumer Survey</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="survey.js"></script>
+<script type="text/javascript">
+var IE = document.attachEvent ? true:false;
+var DOM = document.addEventListener ? true: false;
+
+var Store, startX, startY, diffX, diffY, maxZ=2;
+
+function applyEventF(obj,ename,fname,cap) {
+   if (IE) obj.attachEvent("on"+ename, fname);
+   else if (DOM) obj.addEventListener(ename,fname,cap);
+}
+
+function removeEventF(obj,ename,fname,cap) {
+   if (IE) obj.detachEvent("on"+ename, fname);
+   else if (DOM) obj.removeEventListener(ename,fname,cap);
+}
+
+function eventSource(e) {
+   if (IE) return event.srcElement;
+   else if (DOM) return e.target;
+}
+
+function eventPositionX(e) {
+   if (IE) return event.clientX;
+   else if (DOM) return e.clientX;
+}
+
+function eventPositionY(e) {
+   if (IE) return event.clientY;
+   else if (DOM) return e.clientY;
+}
+
+function setEvents() {
+   document.getElementById("Store1").onmousedown=selectStore;
+   document.getElementById("Store2").onmousedown=selectStore;
+   document.getElementById("Store3").onmousedown=selectStore;
+   document.getElementById("Store4").onmousedown=selectStore;
+   document.getElementById("Store5").onmousedown=selectStore;
+   document.onselectstart=cancelSelect;
+}
+
+function cancelSelect() {
+   return false;
+}
+
+function selectStore(e) {
+   Store = eventSource(e);
+   startX=getXCoord(Store);
+   startY=getYCoord(Store);
+
+   mouseX=eventPositionX(e);
+   mouseY=eventPositionY(e);
+
+
+   diffX=mouseX-startX;
+   diffY=mouseY-startY;
+
+   maxZ++;
+   Store.style.zIndex=maxZ;
+
+   applyEventF(Store,"mousemove",moveStore,"false");
+   applyEventF(Store,"mouseup",dropStore,"false");
+}
+
+function moveStore(e) {
+   mouseX=eventPositionX(e);
+   mouseY=eventPositionY(e);
+   placeIt(Store, mouseX-diffX, mouseY-diffY);
+}
+
+function dropStore(e) {
+   removeEventF(Store,"mousemove",moveStore,"true");
+
+   x = getXCoord(Store);
+   y = getYCoord(Store);
+   
+   if (x >=440 && x<=590 && y >=100 && y<=130) placeIt(Store,440,100);
+   else if (x >=440 && x<=590 && y >=140 && y<=170) placeIt(Store,440,140);
+   else if (x >=440 && x<=590 && y >=180 && y<=210) placeIt(Store,440,180);
+   else if (x >=440 && x<=590 && y >=220 && y<=250) placeIt(Store,440,220);
+   else if (x >=440 && x<=590 && y >=260 && y<=290) placeIt(Store,440,260);
+}
+
+</script>
+</head>
+
+<body onLoad="setEvents()">
+<div id="logo"><img src="logo.jpg" alt="Online Market Surveys" /></div>
+<div id="links"><img src="links.jpg" alt="" /></div>
+<div id="main">
+<h2>Computer Manufacturers</h2>
+<p>Drag and place the names of the the computer manufacturers in order 
+of preference; from the most preferred at the top, to the least preferred 
+at the bottom.</p>
+<p><a href="#">Go to the next question</a></p>
+</div>
+
+
+
+<div id="Num1">1)</div>
+<div id="Store1" class="Store" 
+     style="position:absolute; top:100px; left:600px; width:150px; height:30px; 
+            z-index: 2; cursor: pointer">Dell</div>
+<div id="StoreBox1" class="StoreBox"></div>
+
+
+<div id="Num2">2)</div>
+<div id="Store2" class="Store" 
+     style="position:absolute; top:140px; left:600px; width:150px; height:30px; 
+            z-index: 2; cursor: pointer">Hewlett-Packard</div>
+<div id="StoreBox2" class="StoreBox"></div>
+
+
+<div id="Num3">3)</div>
+<div id="Store3" class="Store" 
+     style="position:absolute; top:180px; left:600px; width:150px; height:30px; 
+            z-index: 2; cursor: pointer">Acer America</div>
+<div id="StoreBox3" class="StoreBox"></div>
+
+
+<div id="Num4">4)</div>
+<div id="Store4" class="Store" 
+     style="position:absolute; top:220px; left:600px; width:150px; height:30px; 
+            z-index: 2; cursor: pointer">IBM</div>
+<div id="StoreBox4" class="StoreBox"></div>
+
+
+<div id="Num5">5)</div>
+<div id="Store5" class="Store" 
+     style="position:absolute; top:260px; left:600px; width:150px; height:30px; 
+            z-index: 2; cursor: pointer">Compaq</div>
+<div id="StoreBox5" class="StoreBox"></div>
+
+</body>
+</html>

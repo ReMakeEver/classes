@@ -1,0 +1,119 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on JavaScript
+   Tutorial 4
+   Case Problem 2
+
+   The Chamberlain Civic Center
+   Author: Laura Bromquist
+   Date:   8/1/2006
+
+   Filename:         ccc.htm
+   Supporting files: back.jpg, ccc.gif, ccc.js, styles.css
+-->
+<title>This Month at the Chamberlain Civic Center</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<script src="ccc.js" type="text/javascript"></script>
+<script type="text/javascript">
+function Marquee() {
+t1=setInterval('moveIt("Text1")', 130);
+t2=setInterval('moveIt("Text2")', 130);
+t3=setInterval('moveIt("Text3")', 130);
+t4=setInterval('moveIt("Text4")', 130);
+t5=setInterval('moveIt("Text5")', 130);
+t6=setInterval('moveIt("Text6")', 130);
+}
+
+function Stop() {
+clearInterval(t1);
+clearInterval(t2);
+clearInterval(t3);
+clearInterval(t4);
+clearInterval(t5);
+clearInterval(t6);
+}
+
+function moveIt(id) {
+var y=yCoord(id);
+if (y<-100) {
+  placeIt(id, 5, 750);
+} else {
+  shiftIt(id, 0, -5);
+}
+}
+</script>
+</head>
+
+<body>
+<form id="marquee_buttons" action="">
+
+<div id="panel">
+   <p>
+      <img src="ccc.gif" alt="The Chamberlain Civic Center" />
+   </p>
+   <h2>
+      Events This Month
+   </h2>
+   <p>To order tickets: Call the box office at (971) 555-9191<br />
+   Or click <a href="#">here</a> to order online.
+   </p>
+</div>
+
+<div id="BOX">
+
+   <div id="Text1" style="position: absolute; left: 0px; top:5px">
+     Coming Soon to the CCC
+   </div>
+
+   <div id="Text2" style="position: absolute; left: 0px; top: 50px">
+     <b>October 2nd, 8 p.m.<br />
+     Falstaff</b><hr />
+     Enjoy the music of Verdi's <i>Falstaff</i>, as presented by the 
+     popular Rockie Mountain Opera Company. Seating is limited.<br /><br />
+     Tickets:  Box ($55), Main Floor ($45), Balcony ($35)
+   </div>
+
+   <div id="Text3" style="position: absolute; left: 0px; top: 200px">
+     <b>October 7th, 8 p.m.<br />
+     Taiwan Acrobats</b><hr />
+     The Taiwan Acrobats return to the Carson Civic Center for another 
+     evening of fun and excitment.<br /><br />
+     Tickets:  Box ($40), Main Floor ($35), Balcony ($30)
+   </div>
+
+   <div id="Text4" style="position: absolute; left: 0px; top: 350px">
+     <b>October 14th, 8 &amp; 10 p.m.<br />
+     Roy Taylor</b><hr />
+     Enjoy of the blues sound of the legendary "Slow Train" Taylor. 
+     Two performances at 8 and 10 p.m.<br /><br />
+     Tickets:  Box ($40), Main Floor ($35), Balcony ($30)
+   </div>
+
+   <div id="Text5" style="position: absolute; left: 0px; top: 500px">
+     <b>October 21st, 8 p.m.<br />
+     Celtic Dancers</b><hr />
+     Enjoy an evening of Celtic music and dance, as presented by the
+     Oban Dance Company of Scotland.<br /><br />
+     Tickets:  Box ($30), Main Floor ($25), Balcony ($20)
+   </div>
+
+   <div id="Text6" style="position: absolute; left: 0px; top: 650px">
+     <b>October 28th, 8 p.m.<br />
+     An Evening with Ike</b><hr />
+     David Lee presents <i>An Evening with Ike</i>, his acclaimed one-man
+     show of the life and times of Dwight Eisenhower.<br /><br />
+     Tickets:  Box ($35), Main Floor ($30), Balcony ($25)
+   </div>
+</div>
+
+<div id="form_buttons">
+      <input type="button" value="Scroll Marquee" onclick="Marquee();" />
+      <input type="button" value="Stop  Marquee" onclick="Stop();" />
+      <input type="button" value="Reset" onclick="location.reload()" />
+</div>
+
+</form>
+</body>
+
+</html>

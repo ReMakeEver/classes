@@ -1,0 +1,15 @@
+/*
+   New Perspectives on JavaScript
+   Tutorial 5
+   Case Problem 2
+   Filename: games.css
+
+   This file contains styles used in the tiles.htm file.
+
+*/
+
+#board {width: 320px;}
+img {border-width: 0px}
+#main {width: 300px; position: absolute; top: 20px; left: 340px}
+#title {text-align: center; border-bottom: 2px solid red}
+#formp {text-align: center}

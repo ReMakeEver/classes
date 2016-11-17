@@ -1,0 +1,149 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on JavaScript
+   Tutorial 5
+   Case Problem 1
+
+   Premier Realty
+   Author: Connie Peres
+   Date:   3/1/2007
+
+   Filename:         house.htm
+   Supporting files: ldown.gif, lup.gif, pback.jpg, pr.gif, premier.css, 
+                     rdown.gif, rup.gif, slide00.jpg - slide11.jpg
+
+-->
+
+<title>Premier Realty</title>
+<link href="premier.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+   #Photo {filter: progid:DXImageTransform.Microsoft.GradientWipe(gradientSize=0.5, wipeStyle=0, Motion=forward)}
+</style>
+
+<script type="text/javascript">
+
+var RUp=new Image();
+RUp.src="rup.gif";
+var RDown=new Image();
+RDown.src="rdown.gif";
+var LUp=new Image();
+LUp.src="lup.gif";
+var LDown=new Image();
+LDown.src="ldown.gif";
+
+var Slides=new Array();
+Slides[0]=new Image();
+Slides[1]=new Image();
+Slides[2]=new Image();
+Slides[3]=new Image();
+Slides[4]=new Image();
+Slides[5]=new Image();
+Slides[6]=new Image();
+Slides[7]=new Image();
+Slides[8]=new Image();
+Slides[9]=new Image();
+Slides[10]=new Image();
+Slides[11]=new Image();
+Slides[0].src="slide00.jpg";
+Slides[1].src="slide01.jpg";
+Slides[2].src="slide02.jpg";
+Slides[3].src="slide03.jpg";
+Slides[4].src="slide04.jpg";
+Slides[5].src="slide05.jpg";
+Slides[6].src="slide06.jpg";
+Slides[7].src="slide07.jpg";
+Slides[8].src="slide08.jpg";
+Slides[9].src="slide09.jpg";
+Slides[10].src="slide10.jpg";
+Slides[11].src="slide11.jpg";
+
+function RIn() {
+  document.images["RightArrow"].src=RDown.src;
+}
+function ROut() {
+  document.images["RightArrow"].src=RUp.src;
+}
+function LIn() {
+  document.images["LeftArrow"].src=LDown.src;
+}
+function LOut() {
+  document.images["LeftArrow"].src=LUp.src;
+}
+
+var SlideNum = 0;
+
+function TransSlide(direction) {
+   document.images["Photo"].filters[0].motion=direction;
+   document.images["Photo"].filters[0].apply();
+   document.images["Photo"].src=Slides[SlideNum].src;
+   document.images["Photo"].filters[0].play(2);
+} 
+
+function SlideShow(direction) {
+   if (direction == "forward") {
+      SlideNum = (SlideNum == 11) ? 0 : SlideNum+1;
+   } else {
+      SlideNum = (SlideNum == 0) ? 11: SlideNum-1;
+   }
+
+   if (document.images["Photo"].filters) {
+      TransSlide(direction);
+   } else {
+      document.images["Photo"].src=Slides[SlideNum].src;
+   }
+}
+
+</script>
+</head>
+
+<body>
+<p id="title">
+   <img src="pr.gif" alt="Premier Realty" />
+</p>
+
+<h2>239 Royalty Avenue</h2>
+<p id="price"><b>Price: </b>$415,000</p>
+<p id="description">Large hillside home on 1.5 acres of land on Bear Mountain. 
+The views of Thompson Valley from this 2400 square ft. home are stunning. Four 
+bedrooms with 2 full bathrooms. Sunken living room with 2-story high fireplace.
+Master bathroom includes whirlpool tub and separate shower. Unfinished attic
+available for storage. Motivated seller.</p>
+
+<div id="slidebox">
+<table cellspacing="0" cellpadding="3" >
+<tr><th colspan="2">Specifications</th></tr>
+<tr><td>Property Type</td><td>Single Family</td></tr>
+<tr><td>Bedrooms</td><td>4</td></tr>
+<tr><td>Baths</td><td>2</td></tr>
+<tr><td>Garage</td><td>None</td></tr>
+<tr><td>Square Ft.</td><td>2400</td></tr>
+<tr><td>Lot Size</td><td>1.5 acres</td></tr>
+<tr><td>Year Built</td><td>2003</td></tr>
+</table>
+
+<p><img name="Photo" id="Photo" src="slide00.jpg" alt="" /></p>
+<p>
+   <a href="Javascript:SlideShow('reverse')" onmouseup="LOut()" onmousedown="LIn()">
+      <img name="LeftArrow" id="LeftArrow" src="lup.gif" alt="" />
+   </a>
+   <a href="Javascript:SlideShow('forward')" onmouseup="ROut()" onmousedown="RIn()">
+      <img name="RightArrow" id="RightArrow" src="rup.gif" alt="" />
+   </a>
+   <br />
+   Click the arrows to scroll through a slide show of the property.
+</p>
+
+</div>
+
+<address>
+<b>Premier Realty</b> &nbsp;&#183;&nbsp;
+1011 Lewis Avenue &nbsp;&#183;&nbsp;
+Vale Park, CO &nbsp;&nbsp;80517 &nbsp;&#183;&nbsp;
+Voice: (970) 555-8011 &nbsp;&#183;&nbsp;
+Fax: (970) 555-8012
+</address>
+
+</body>
+</html>

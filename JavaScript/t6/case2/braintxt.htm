@@ -1,0 +1,86 @@
+<html>
+<head>
+<!-- 
+   New Perspectives on JavaScript
+   Tutorial 6
+   Case Problem 2
+
+   Anatomy 101
+   Author: 
+   Date:   
+
+   Filename:         brain.htm
+   Supporting files: brain.css, brain.jpg, frame.css
+
+-->
+<title>Parts of the Brain</title>
+<link href="brain.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+Head = new Array();
+Head[0]="";
+Head[1]="Frontal Lobe";
+Head[2]="Parietal Lobe";
+Head[3]="Occipital Lobe";
+Head[4]="Temporal Lobe";
+
+Summary = new Array();
+Summary[0]="";
+Summary[1]="The frontal lobe controls muscle movements, speaking, ";
+Summary[1]+="analytical, and artistic intelligence. Body image and identity is ";
+Summary[1]+="primarily located in the right frontal lobe. Organizational and ";
+Summary[1]+="analytical skills are located in the left frontal lobe.";
+
+Summary[2]="The parietal lobe controls the sensation of touch. The left ";
+Summary[2]+="parietal lobe interprets signals from the right hand. The right ";
+Summary[2]+="lobe interprets signals from the left hand.";
+
+Summary[3]="The occipital lobe interprets visual information from " ;
+Summary[3]+="the eye. The right occipital lobe receives signals from the left ";
+Summary[3]+="eye. The left lobe interprets signals from the right eye.";
+
+Summary[4]="The temporal lobes control interpretation and long-term memory. ";
+Summary[4]+="They are also involved in the perception of sound and the processing ";
+Summary[4]+="auditory language."
+
+</script>
+</head>
+
+<body>
+<div id="main">
+<h1>Anatomy 101</h1>
+<p>Move your mouse pointer over the parts of the brain shown below. A
+description of the brain lobe will appear in a pop-up window to the
+left.</p>
+
+<p id="brainp">
+   <iframe id="parts" name="parts" scrolling="no"></iframe>
+   <img src="brain.jpg" usemap="#Brain" alt="" />
+</p>
+
+<address>Anatomy 101 &#149; Prof. Jacob Terrell &#149; Rm. 231 Groudle Hall &#149;
+Office Hours: MT 3-5 p.m.</address>
+</div>
+
+<map id="Brain" name="Brain">
+   <area shape="poly" alt="Frontal Lobe"
+    coords="101,25,101,34,107,42,116,54,128,63,132,72,133,85,134,97,134,105,140,109,147,115,154,118,160,125,163,130,165,136,165,146,179,146,189,143,198,137,206,129,213,120,218,105,216,88,211,72,202,59,189,49,178,40,166,35,150,30,138,28,129,26,119,26,113,24,106,24,101,24,101,24" 
+    href="#" />
+
+   <area shape="poly" alt="Parietal Lobe" 
+    coords="36,60,41,73,48,87,66,90,84,94,95,94,110,98,128,102,133,106,133,90,131,70,124,61,117,55,112,48,106,41,101,34,99,31,100,25,94,25,86,25,81,28,75,32,71,32,65,33,60,38,52,44,44,49,40,54,36,58" 
+    href="#" />
+
+   <area shape="poly" alt="Occipital Lobe"
+    coords="34,61,26,70,21,78,17,90,14,99,13,110,15,118,19,123,23,128,31,132,40,135,48,136,58,137,65,136,62,129,58,119,55,109,54,103,52,97,48,90,46,84,43,78,40,72,37,64" 
+    href="#"  />
+
+   <area shape="poly" alt="Temporal Lobe"
+    coords="49,88,53,100,57,110,61,124,64,135,68,139,80,142,90,145,102,150,111,156,121,160,130,164,144,164,154,159,158,154,162,146,163,139,163,131,157,121,147,114,137,108,127,104,108,99,94,95,83,95,75,93,65,91,57,89,50,89" 
+    href="#"  />
+
+   <area shape="default" nohref="nohref" alt="" />
+</map>
+
+</body>
+</html>

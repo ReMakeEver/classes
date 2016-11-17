@@ -1,0 +1,71 @@
+<html>
+<head>
+<!-- 
+	New Perspectives on JavaScript
+	Tutorial 9
+	Tutorial Case 4
+	
+	Dan James Collection
+	Author: Vernon Jones
+	Date: 3/28/2008
+	
+	Filename:		dan.htm
+	Supporting files:	dan.css, dan_cart.htm, dan.js
+	
+-->
+
+<script type="text/javascript" src="dan.js"></script>
+<link rel="stylesheet" type="text/css" href="dan.css" />
+<title>Daniel James Collection - Product Page</title>
+</head>
+
+<body>
+<img src="dan.gif" alt="" align="left"><form><input type="button" value="View Cart" onclick="window.location='dan_cart.htm'") />
+</form>
+<br />
+<div id="intro">
+Daniel James offers the finest in homemade craft items. The following two favorites, which Dan used to offer only at craft fairs, are now available for purchase from this site.
+</div>
+<div id="item1">
+<form name="item1" action="#" method="post">
+<table>
+	<tr>
+		<td><img src="bowl0.jpg" alt="" align="left"/> This beautiful four-cornered ashtray is a favorite at all of Dan's craft shows. Finely crafted and polished, it is a classic in Dan's fine collection of ash trays.
+		</td>
+	</tr>
+	<tr>
+		<td>Price:$16.95</td>
+	</tr>
+	<tr>
+		<td>Quantity:<input name="bowl1" size="1" maxlength="1"  /></td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Add To Cart"  onclick="addCart('Ash Tray','16.95','0')"/>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+<div id="item2">
+<form name="item2" action=# method="post">
+<table>
+	<tr>
+		<td><img src="bowl1.jpg"alt="" align="left"/> Hand crafted and meticulously smoothed, this simple hand bowl will compliment the decor of any table. This is one of Dan's first projects, and only a limited number are available.
+		</td>
+	</tr>
+	<tr>
+		<td>Price:$12.50</td>
+	</tr>
+	<tr>
+		<td>Quantity:<input name="bowl2" size="1" maxlength="1"  /></td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Add To Cart" onclick="addCart('Hand Bowl','12.50','1')"  />
+		</td>
+	</tr>
+</table>
+</form>
+
+</div>
+</body>
+</html>

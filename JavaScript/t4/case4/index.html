@@ -7,7 +7,7 @@
     ul#il li{ display:inline; }ul#bl li{ display:block; }ul#dibl li{ list-style-type:disc;display:block; }
    </style>
   </head>
-  <body>
+  <body onload="setInterval(function(){ bugs(); }, 2000)">
    <div align="center">
     <ul id="il">
      <font size="12">
@@ -34,5 +34,31 @@
      Same day service in most cases. Reasonable rates. Call our hot line at: <b>(212)555-9900</b>
     </font>
    </div>
+   <div id="image" align="center">
+   </div>
+   <script type="text/javascript">
+    var imgs = {"bug.jpg","bugdead.jpg"};
+    var imgA = "<img src='";var imgB = "' />";
+    var num = 1;
+    function bugs(){
+     if(num==3){
+      num = 1;
+      switchBug();
+     }else{
+      num++;
+      bugs();
+      switchPic();
+     }
+    }
+    function switchPic(){
+     if(num==1){
+      document.getElementById("image").innerHTML = imgA+imgs[0]+imgB;
+     }else{
+      if(num==2){
+       document.getElementbyId("image").innerHTML = imgA+imgs[1]+imgB;
+      }
+     }
+    }
+   </script>
   </body>
  </html>

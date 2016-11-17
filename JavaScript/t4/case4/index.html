@@ -7,7 +7,7 @@
     ul#il li{ display:inline; }ul#bl li{ display:block; }ul#dibl li{ list-style-type:disc;display:block; }
    </style>
   </head>
-  <body onload="setInterval(function(){ bugs(); }, 3000)">
+  <body onload="bugs()">
    <div align="center">
     <ul id="il">
      <font size="12">
@@ -34,22 +34,23 @@
      Same day service in most cases. Reasonable rates. Call our hot line at: <b>(212)555-9900</b>
     </font>
    </div>
-   <div id="image" align="center">
+   <div>
+    <div id="images" align="center">
+    </div>
+    <div align="right">
+    </div>&#8592 &#8592 &#8592 to kill click the fly &#8592 &#8592 &#8592
    </div>
    <script type="text/javascript">
-    var imgs = new Array("<img src='bug.jpg' alt='bug' />","<img src='bugdead.jpg' alt='bug' />");
+    var imgs = new Array("<img src='bug.jpg' alt='bug' id='i1' />","<img src='bugdead.jpg' alt='bug' id='i2'/>");
     var num = 1;
+    document.getElementById("i1").addEventListener("click", switchPic);
+    document.getElementById("i2").addEventListener("click", switchPic);
     function bugs(){
-     if(num==3){
-      num = 1;
-      switchBug();
-     }else{
-      num++;
-      bugs();
-      switchPic();
-     }
+     document.getElementById("images").innerHTML = imgs[0];
     }
     function switchPic(){
+     n++
+     if(num==3){ num = 1; }
      if(num==1){
       document.getElementById("image").innerHTML = imgs[0];
      }else{
@@ -58,7 +59,6 @@
       }
      }
     }
-    document.getElementById("image").innerHTML = imgs[0];
    </script>
   </body>
  </html>

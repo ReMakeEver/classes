@@ -41,10 +41,8 @@
     </div>&#8592 &#8592 &#8592 to kill click the fly &#8592 &#8592 &#8592
    </div>
    <script type="text/javascript">
-    var imgs = new Array("<img src='bug.jpg' alt='bug' id='i1' />","<img src='bugdead.jpg' alt='bug' id='i2'/>");
+    var imgs = new Array("<img src='bug.jpg' alt='bug' id='i1' onclick='switchPic()' />","<img src='bugdead.jpg' alt='bug' id='i2' onclick='switchPic)' />");
     var num = 1;
-    document.getElementById("i1").addEventListener("click", switchPic);
-    document.getElementById("i2").addEventListener("click", switchPic);
     function bugs(){
      document.getElementById("images").innerHTML = imgs[0];
     }

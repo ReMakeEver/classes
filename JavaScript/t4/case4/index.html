@@ -47,14 +47,15 @@
      document.getElementById("images").innerHTML = imgs[0];
     }
     function switchPic(){
-     n++
-     if(num==3){ num = 1; }
      if(num==1){
-      document.getElementById("image").innerHTML = imgs[0];
+      document.getElementById("images").innerHTML = imgs[1];
+      num = 2;
      }else{
       if(num==2){
-       document.getElementById("image").innerHTML = imgs[1];
+       document.getElementById("images").innerHTML = imgs[0];
+       num = 1;
       }
+     }
      }
     }
    </script>

@@ -10,5 +10,32 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/bootstrap.min.js"></script>
   </head>
   <body>
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+     <div class="navbar-header">
+      <a class="navbar-brand" href="https://remakeever.github.io/classes/final.html"><font size="12"><font color="#00FFFF">L. </font><font color="#FFAA00">P. </font><font color="#00FF00">Neil</font></font></a>
+     </div>
+    </div>
+    <ul class="nav navbar-nav">
+     <li class=""><a href="javascript:showWAY()">Where Are You</a></li>
+     <li class=""><a href="javascript:showS()">Search</a></li>
+     <li class=""><a href="javascritp:showOP()">Other Projects</a></li>
+     <li class=""><a href="javascript:showUR()">Used Resources</a></li>
+     <li class=""><a href="javascript:showMB()">Made By</a></li>
+    </ul>
+   </nav>
+   <div id="divBody"></div>
+   <script type="text/javascript">
+    var wayBody = "<div>";wayBody += "<div align='center'>Where Are You</div>";wayBody += "</div>";
+    var sBody = "<div>";sBody += "<div align='center'>Search</div>";sBody += "</div>";
+    var opBody = "<div>";opBody += "<div align='center'>Other Projects</div>";opBody += "</div>";
+    var urBody = "<div>";urBody += "<div align='center'>Used Resource</div>";urBody += "</div>";
+    var mbBody = "<div>";mbBody += "<div align='center'>Made By</div>";mbBody += "</div>";
+    function showWAY(){ document.getElementById("divBody").innerHTML = wayBody; }
+    function showS(){ document.getElementById("divBody").innerHTML = sBody; }
+    function showOP(){ document.getElementById("divBody").innerHTML = opBody; }
+    function showUR(){ document.getElementById("divBody").innerHTML = urBody; }
+    function showMB(){ document.getElementById("divBody").innerHTML = mbBody; }
+   </script>
   </body>
  </html>

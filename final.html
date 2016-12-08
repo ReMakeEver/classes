@@ -50,7 +50,7 @@
     function showWAY(){ document.getElementById("divBody").innerHTML = wayBody;document.getElementById("aBody").innerHTML = wayE; }
      function sub1(){ document.getElementById("aBody").innerHTML = "Hello "+document.getElementById("g1a").value+" From "+document.getElementById("g1b").value; }
     function showS(){ document.getElementById("divBody").innerHTML = sBody;document.getElementById("aBody").innerHTML = sE;document.getElementById("extra").innerHTML = seE; }
-     function getKey(event){ var x = event.keyCode;if(x==12){searchBeg();} }
+     function getKey(event){ var x = event.keyCode;if(x==13){searchBeg();} }
      function searchBeg(){ var x = document.getElementById("g2a");if(x.value=="location"){sRes1();}if(x.value=="school"){sRes2();}if(x.value=="resources"){sRes3();}if(x.value=="about"){sRes4();}if(x.value=="search"){sRes5();} }
       function sRes1(){}
       function sRes2(){}

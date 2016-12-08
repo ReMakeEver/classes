@@ -45,6 +45,7 @@
      var res4 = "<div id='block' align='center'>";res4 += "</div>";
      var res5 = "<div id='block' align='center'>";res5 += "</div>";
     var opBody = "<div>";opBody += "<div align='center'><h1>Other Projects</h1></div>";opBody += "<div id='aBody'>";opBody += "</div>";opBody += "</div>";
+     var opE "<div id='block' align='center'>";opE += "</div>";
     var urBody = "<div>";urBody += "<div align='center'><h1>Used Resource</h1></div>";urBody += "<div id='aBody'>";urBody += "</div>";urBody += "</div>";
     var mbBody = "<div>";mbBody += "<div align='center'><h1>Made By</h1></div>";mbBody += "<div id='aBody'>";mbBody += "</div>";mbBody += "</div>";
     function showWAY(){ document.getElementById("divBody").innerHTML = wayBody;document.getElementById("aBody").innerHTML = wayE; }
@@ -53,9 +54,9 @@
      function getKey(event){ var x = event.keyCode;if(x==13){searchBeg();} }
      function searchBeg(){ var x = document.getElementById("g2a");if(x.value=="location"){sRes1();}if(x.value=="school"){sRes2();}if(x.value=="resources"){sRes3();}if(x.value=="about"){sRes4();}if(x.value=="search"){sRes5();} }
       function sRes1(){ document.getElementById("aBody").innerHTML = res1; }
-      function sRes2(){}
-      function sRes3(){}
-      function sRes4(){}
+      function sRes2(){ document.getElementById("aBody").innerHTML = res2; }
+      function sRes3(){ document.getElementById("aBody").innerHTML = res3; }
+      function sRes4(){ document.getElementById("aBody").innerHTML = res4; }
       function sRes5(){}
     function showOP(){ document.getElementById("divBody").innerHTML = opBody; }
     function showUR(){ document.getElementById("divBody").innerHTML = urBody; }

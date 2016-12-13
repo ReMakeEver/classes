@@ -9,6 +9,7 @@
    <style>
     body{ font-family:Helvetica; }
     #block input{ display:block; }#block a{ display:block; }
+    #inline input{ display:inline; }#inline a{ display:inline; }
     .navbar{ background-color:#FFFFFF;border:0; }
     .jumbotron{ background-color:#FFFFFF;padding:100px 25px; }
    </style>
@@ -34,11 +35,11 @@
    </div>
    <div id="divBody"></div>
    <script type="text/javascript">
-    var wayBody = "<div>";wayBody += "<div align='center'><h1>Where Are You</h1></div>";wayBody += "</div>";
-    var sBody = "<div>";sBody += "<div align='center'><h1>Search</h1></div>";sBody += "</div>";
-    var opBody = "<div>";opBody += "<div align='center'><h1>Other Projects</h1></div>";opBody += "</div>";
-    var urBody = "<div>";urBody += "<div align='center'><h1>Used Resources</h1></div>";urBody += "</div>";
-    var mbBody = "<div>";mbBody += "<div align='center'><h1>Made By</h1></div>";mbBody += "</div>";
+    var wayBody = "<div>";wayBody += "<div align='center'><h1>Where Are You</h1></div>";wayBody += "<div id='inline'>";wayBody += "<input type='text' value='FullName' onfocus='";wayBody += "value=''";wayBody += "' id='g1a'>";wayBody += "<select id='g1b'>";wayBody += "<option value='Alabama'>Alabama</option>";wayBody += "<option value='Alaska'>Alaska</option>";wayBody += "<option value='Arizona'>Arizona</option>";wayBody += "<option value='Arkansas'>Arkansas</option>";wayBody += "<option value='California'>California</option>";wayBody += "<option value='Colorado'>Colorado</option>";wayBody += "<option value='Connecticut'>Connecticut</option>";wayBody += "<option value='Delaware'>Delaware</option>";wayBody += "<option value='Florida'>Florida</option>";wayBody += "<option value='Georgia'>Georgia</option>";wayBody += "<option value='Hawaii'>Hawaii</option>";wayBody += "<option value='Idaho'>Idaho</option>";wayBody += "<option value='Illinois'>Illinois</option>";wayBody += "</select>";wayBody += "</div>";wayBody += "</div>";
+    var sBody = "<div>";sBody += "<div align='center'><h1>Search</h1></div>";sBody += "<div id='inline'>";wayBody += "</div>";sBody += "</div>";
+    var opBody = "<div>";opBody += "<div align='center'><h1>Other Projects</h1></div>";opBody += "<div id='inline'>";opBody += "</div>";opBody += "</div>";
+    var urBody = "<div>";urBody += "<div align='center'><h1>Used Resources</h1></div>";urBody += "<div id='inline'>";urBody += "</div>";urBody += "</div>";
+    var mbBody = "<div>";mbBody += "<div align='center'><h1>Made By</h1></div>";mbBody += "<div id='inline'>";mbBody += "</div>";mbBody += "</div>";
     function showWAY(){ document.getElementById("divBody").innerHTML = wayBody; }
     function showS(){ document.getElementById("divBody").innerHTML = sBody; }
     function showOP(){ document.getElementById("divBody").innerHTML = opBody; }

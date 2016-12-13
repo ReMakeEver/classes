@@ -34,30 +34,13 @@
    </div>
    <div id="divBody"></div>
    <script type="text/javascript">
-    var wayBody = "<div>";wayBody += "<div align='center'><h1>Where Are You</h1></div>";wayBody += "<div id='aBody'>";wayBody += "</div>";wayBody += "</div>";
-     var wayE = "<div id='block' align='center'>";wayE += "<input type='text' value='Full Name' onfocus='";wayE += 'value=""';wayE += "' id='g1a'>";wayE += "<br />";wayE += "<select name='location' id='g1b'>";wayE += "<option value='Falcon'>Falcon</option>";wayE += "<option value='ColoradoSprings'>Colorado Springs</option>";wayE += "</select>";wayE += "<br />";wayE += "<input type='button' value='Submit' onclick='sub1()'>";wayE += "</div>";
-    var sBody = "<div>";sBody += "<div align='center'><h1>Search</h1></div>";sBody += "<div id='aBody'>";sBody += "</div>";sBody += "</div>";
-     var sE = "<div align='center'>";sE += "<input type='text' value='Search Pages' onfocus='";sE += 'value=""';sE += "' id='g2a' onkeypress='getKey(event)'>";sE += "<div id='extra'></div>";sE += "</div>";
-      var seE = "<h2>Keywords that can be used are shown below</h2><br />";seE += "<p>location, school, </p>";seE += "<p>resources, about, </p>";seE += "<p>search.</p>";
-     var res1 = "<div id='block' align='center'>";res1 += "<a href='javascript:showWAY()'>WHere Are You</a>";res1 += "<a href='javascript:showS()'>Search</a>";res1 += "<a href='javascript:showOP()'>Other Projects</a>";res1 += "<a href='javascript:showUR()'>Used Resource</a>";res1 += "</div>";
-     var res2 = "<div id='block' align='center'>";res2 += "</div>";
-     var res3 = "<div id='block' align='center'>";res3 += "</div>";
-     var res4 = "<div id='block' align='center'>";res4 += "</div>";
-     var res5 = "<div id='block' align='center'>";res5 += "</div>";
-    var opBody = "<div>";opBody += "<div align='center'><h1>Other Projects</h1></div>";opBody += "<div id='aBody'>";opBody += "</div>";opBody += "</div>";
-     var opE "<div id='block' align='center'>";opE += "</div>";
-    var urBody = "<div>";urBody += "<div align='center'><h1>Used Resource</h1></div>";urBody += "<div id='aBody'>";urBody += "</div>";urBody += "</div>";
-    var mbBody = "<div>";mbBody += "<div align='center'><h1>Made By</h1></div>";mbBody += "<div id='aBody'>";mbBody += "</div>";mbBody += "</div>";
-    function showWAY(){ document.getElementById("divBody").innerHTML = wayBody;document.getElementById("aBody").innerHTML = wayE; }
-     function sub1(){ document.getElementById("aBody").innerHTML = "Hello "+document.getElementById("g1a").value+" From "+document.getElementById("g1b").value; }
-    function showS(){ document.getElementById("divBody").innerHTML = sBody;document.getElementById("aBody").innerHTML = sE;document.getElementById("extra").innerHTML = seE; }
-     function getKey(event){ var x = event.keyCode;if(x==13){searchBeg();} }
-     function searchBeg(){ var x = document.getElementById("g2a");if(x.value=="location"){sRes1();}if(x.value=="school"){sRes2();}if(x.value=="resources"){sRes3();}if(x.value=="about"){sRes4();}if(x.value=="search"){sRes5();} }
-      function sRes1(){ document.getElementById("aBody").innerHTML = res1; }
-      function sRes2(){ document.getElementById("aBody").innerHTML = res2; }
-      function sRes3(){ document.getElementById("aBody").innerHTML = res3; }
-      function sRes4(){ document.getElementById("aBody").innerHTML = res4; }
-      function sRes5(){}
+    var wayBody = "<div>";wayBody += "<div align='center'><h1>Where Are You</h1></div>";wayBody += "</div>";
+    var sBody = "<div>";sBody += "<div align='center'><h1>Search</h1></div>";sBody += "</div>";
+    var opBody = "<div>";opBody += "<div align='center'><h1>Other Projects</h1></div>";opBody += "</div>";
+    var urBody = "<div>";urBody += "<div align='center'><h1>Used Resources</h1></div>";urBody += "</div>";
+    var mbBody = "<div>";mbBody += "<div align='center'><h1>Made By</h1></div>";mbBody += "</div>";
+    function showWAY(){ document.getElementById("divBody").innerHTML = wayBody; }
+    function showS(){ document.getElementById("divBody").innerHTML = sBody; }
     function showOP(){ document.getElementById("divBody").innerHTML = opBody; }
     function showUR(){ document.getElementById("divBody").innerHTML = urBody; }
     function showMB(){ document.getElementById("divBody").innerHTML = mbBody; }

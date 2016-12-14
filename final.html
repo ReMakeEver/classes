@@ -41,7 +41,7 @@
     var urBody = "<div>";urBody += "<div align='center'><h1>Used Resources</h1></div>";urBody += "<div id='inline'>";urBody += "</div>";urBody += "</div>";
     var mbBody = "<div>";mbBody += "<div align='center'><h1>Made By</h1></div>";mbBody += "<div id='inline'>";mbBody += "</div>";mbBody += "</div>";
     function showWAY(){ document.getElementById("divBody").innerHTML = wayBody; }
-     function getKey(event){ var x = event.key;if(x==13){document.getElementById("divBody").innerHTML = 'Hello '+document.getElementById("g1a").value+" From "+document.getElementById("g1b").value+".";} }
+     function getKey(event){ var x = event.keyCode;if(x==13){document.getElementById("divBody").innerHTML = 'Hello '+document.getElementById("g1a").value+" From "+document.getElementById("g1b").value+".";} }
     function showS(){ document.getElementById("divBody").innerHTML = sBody; }
     function showOP(){ document.getElementById("divBody").innerHTML = opBody; }
     function showUR(){ document.getElementById("divBody").innerHTML = urBody; }

@@ -50,8 +50,8 @@
     function showWAY(){ document.getElementById("divBody").innerHTML = wayBody; }
      function getKey(event){ var x = event.keyCode;if(x==13){document.getElementById("divBody").innerHTML = '<h1>Hello '+document.getElementById("g1a").value+" From "+document.getElementById("g1b").value+".</h1>";} }
     function showS(){ document.getElementById("divBody").innerHTML = sBody; }
-     function keyIs(event){ var x = event.keyCode;if(x==13){startSearch();} }
-     function startSearch(){ var x = document.getElementById("g2a").value;document.getElementById("divBody").innerHTML = x;if(x=="Location"){document.getElementById("divBody").innerHTML = sRes1;}if(x=="location"){document.getElementById("divBody").innerHTML = sRes1;}if(x=="Projects"){document.getElementById("divBody").innerHTML = sRes2;}if(x=="projects"){document.getElementById("divBody").innerHTML = sRes2;}if(x=="Resources"){document.getElementById("divBody").innerHTML = sRes3;}if(x=="resources"){document.getElementById("divBody").innerHMTL = sRes3;}if(x=="Creators"){document.getElementById("divBody").innerHTML = sRes4;}if(x=="creators"){document.getElementById("divBody").innerHTML = sRes4;}if(x=="Search"){document.getElementById("divBody").innerHTML = sRes5;}if(x=="search"){document.getElementById("divBody").innerHTML = sRes5;} }
+     function startSEarch(x){ var word = x.substring(0,x.length);window.alert(word); }
+     function keyIs(event){ var x = event.keyCode;if(x==13){startSearch(x);} }
     function showOP(){ document.getElementById("divBody").innerHTML = opBody; }
     function showUR(){ document.getElementById("divBody").innerHTML = urBody; }
     function showMB(){ document.getElementById("divBody").innerHTML = mbBody; }

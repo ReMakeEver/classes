@@ -25,7 +25,7 @@ function parse1(xml){
  for(i = 0;i<xLen;i++){
   element = x[i];
   if(element.nodeName == "title"){
-   txt += "<font size='12'>"+element.nodeValue+"</font>";
+   txt += "<div style='display:block;'><font size='12'>"+element.nodeValue+"</font></div>";
   }
  }
 }

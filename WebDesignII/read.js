@@ -25,7 +25,11 @@ function parse1(xml){
  for(i = 0;i<xLen;i++){
   element = x[i];
   if(element.nodeName == "title"){
-   txt += "<div style='display:block;'><font size='12'>"+element.nodeValue+"</font></div>";
+   txt += "<div id='t1c1Title'>"+element.nodeValue+"</div>";
+  }
+  if(element.nodeName == "sub"){
+   txt += "<div id='t1c1Sub'>"+element.nodeValue+"</div>";
   }
  }
+ document.getElementById("divBody").innerHTML = txt;
 }

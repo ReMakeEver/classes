@@ -5,5 +5,6 @@ Roles:
 Locations:
  https://www.southernute-nsn.gov/history/
  http://ilovehistory.utah.gov/people/first_peoples/tribes/ute.html
+ http://uteproud.utah.edu/ute-history/
 Extra Facts:
  http://native-american-indian-facts.com/Great-Basin-American-Indian-Facts/Ute-Indian-Facts.shtml

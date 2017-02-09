@@ -1,49 +1,50 @@
-<s:schema xmlns:s="http://www.w3.org/2001/XMLSchema">
- <s:attribute name="donatedBy" type="s:string" />
- <s:attribute name="cid" type="s:string" />
- <s:attribute name="metadata" type="s:string" />
- <s:element name="description" type="s:string" />
- <s:element name="catalog">
-  <s:complexType>
-   <s:element name="item" type="s:string" minOccurs="1" maxOccurs="unbounded" />
-  </s:complexType>
- </s:element>
-  <s:element name="item">
+<?xml version="1.0" encoding="utf-8"?>
+ <s:schema xmlns = "https://remakeever.github.io/classes" targetNamespace="https://remakeever.github.io/classes" xmlns:s="https://remakeever.github.io/classes/WebDesignII" s:schemaLocation="https://remakeever.github.io/classes/WebDesignII/t3c1.xsd">
+  <s:attribute name="donatedBy" type="s:string" />
+  <s:attribute name="cid" type="s:string" />
+  <s:attribute name="metadata" type="s:string" />
+  <s:element name="description" type="s:string" />
+  <s:element name="catalog">
    <s:complexType>
-    <s:sequence>
-     <s:element name="photo" type="s:string" minOccurs="1" maxOccurs="1" />
-    </s:sequence>
+    <s:element name="item" type="s:string" minOccurs="1" maxOccurs="unbounded" />
    </s:complexType>
   </s:element>
-   <s:element name="photo">
+   <s:element name="item">
     <s:complexType>
      <s:sequence>
-      <s:element name="info" type="s:string" minOccurs="1" maxOccurs="1" />
-      <s:element name="images" type="s:string" minOccurs="1" maxOccurs="1" />
+      <s:element name="photo" type="s:string" minOccurs="1" maxOccurs="1" />
      </s:sequence>
     </s:complexType>
-    <s:attribute ref="donatedBy" use="required" />
-    <s:attribute ref="cid" use="required" />
    </s:element>
-    <s:element name="info">
+    <s:element name="photo">
      <s:complexType>
       <s:sequence>
-       <s:element name="name" type="s:string" minOccurs="1" maxOccurs="1" />
-       <s:element ref="description" minOccurs="1" maxOccurs="1" />
+       <s:element name="info" type="s:string" minOccurs="1" maxOccurs="1" />
+       <s:element name="images" type="s:string" minOccurs="1" maxOccurs="1" />
       </s:sequence>
      </s:complexType>
+     <s:attribute ref="donatedBy" use="required" />
+     <s:attribute ref="cid" use="required" />
     </s:element>
-     <s:element name="name" type="s:string">
-      <s:attribute ref="metadata" use="required" />
+     <s:element name="info">
+      <s:complexType>
+       <s:sequence>
+        <s:element name="name" type="s:string" minOccurs="1" maxOccurs="1" />
+        <s:element ref="description" minOccurs="1" maxOccurs="1" />
+       </s:sequence>
+      </s:complexType>
      </s:element>
-    <s:element name="images">
-     <s:complexType>
-      <s:sequence>
-       <s:element name="img" type="s:string" minOccurs="1" maxOccurs="unbounded" />
-      </s:sequence>
-     </scomplexType>
-    </s:element>
-     <s:element name="img">
-      <s:attribute name="src" type="s:anyURI" use="required" />
+      <s:element name="name" type="s:string">
+       <s:attribute ref="metadata" use="required" />
+      </s:element>
+     <s:element name="images">
+      <s:complexType>
+       <s:sequence>
+        <s:element name="img" type="s:string" minOccurs="1" maxOccurs="unbounded" />
+       </s:sequence>
+      </s:complexType>
      </s:element>
-</s:schema>
+      <s:element name="img">
+       <s:attribute name="src" type="s:anyURI" use="required" />
+      </s:element>
+ </s:schema>

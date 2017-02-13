@@ -2,13 +2,13 @@
  <s:schema xmlns="https://remakeever.github.io/classes" targetNamespace="https://remakeever.github.io/classes/" xmlns:s="https://remakeever.github.io/classes/WebDesignII/" s:schemaLocation="https://remakeever.github.io/classes/WebDesignII/t3c2.xsd">
   <s:element name="city" type="s:string" />
   <s:element name="tune" type="s:string" />
-  <s:attribute name="
   <s:element name="bands">
    <s:complexType>
     <s:sequence>
      <s:element name="band" type="s:string" minOccurs="1" maxOccurs="unbounded" />
     </s:sequence>
    </s:complexType>
+   <s:attribute name="cid" type="s:string" minOccurs="1" maxOccurs="1" />
   </s:element>
    <s:element name="band">
     <s:complexType>

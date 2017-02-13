@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <s:schema xmlns="https://remakeever.github.io/classes" targetNamespace="https://remakeever.github.io/classes/" xmlns:s="https://remakeever.github.io/classes/WebDesignII/" s:schemaLocation="https://remakeever.github.io/classes/WebDesignII/t3c2.xsd">
+  <s:element name="city" type="s:string" />
+  <s:element name="tune" type="s:string" />
+  <s:attribute name="
+  <s:element name="bands">
+   <s:complexType>
+    <s:sequence>
+     <s:element name="band" type="s:string" minOccurs="1" maxOccurs="unbounded" />
+    </s:sequence>
+   </s:complexType>
+  </s:element>
+   <s:element name="band">
+    <s:complexType>
+     <s:sequence>
+      <s:element name="info" type="s:string" minOccurs="1" maxOccurs="1" />
+      <s:element name="data" type="s:string" minOccurs="1" maxOccurs="1" />
+     </s:sequence>
+    </s:complexType>
+   </s:element>
+    <s:element name="info">
+     <s:complexType>
+      <s:sequence>
+       <s:element name="name" type="s:string" minOccurs="1" maxOccurs="1" />
+       <s:element ref="city" minOccurs="1" maxOccurs="1" />
+       <s:element name="logo" type="s:string" minOccurs="1" maxOccurs="1" />
+      </s:sequence>
+     </s:complexType>
+    </s:element>
+     <s:element name="name">
+      <s:attribute name="grade" type="s:string" use="required" />
+     </s:element>
+     <s:element name="logo">
+      <s:attribute name="src" type="s:anyURI" use="required" />
+     </s:element>
+    <s:element name="data">
+     <s:complexType>
+      <s:sequence>
+       <s:element name="competition" type="s:string" minOccurs="1" maxOccurs="1" />
+      </s:sequence>
+     </s:complexType>
+    </s:element>
+     <s:element name="competition">
+      <s:complexType>
+       <s:sequence>
+        <s:element name="event" type="s:string" minOccurs="1" maxOccurs="unbounded" />
+       </s:sequence>
+      </s:complexType>
+     </s:element>
+      <s:element name="event">
+       <s:complexType>
+        <s:sequence>
+         <s:element ref="tune" minOccurs="1" maxOccurs="unbounded" />
+        </s:sequence>
+       </s:complexType>
+       <s:attribute name="type" type="s:string" minOccurs="1" maxOccurs="1" />
+      </s:element>
+ </s:schema>

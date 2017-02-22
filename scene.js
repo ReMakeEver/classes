@@ -21,5 +21,14 @@ function setStyle(style,level){
   context.fillStyle = style;
   context.fillRect(0,0,window.innerWidth,window.innerHeight);
  }else{
+   if(style=="normal" && level=="medium"){
+    var width = (window.innerWidth/2)-30;var height = window.innerHeight;
+    var canvas = document.getElementsByTagName("CANVAS")[0];
+    var context = canvas.getContext("2d");
+    var gradient = context.createLinearGradient(width,0,width,height);
+    gradient.addColorStop(0,"#00BBFF");gradient.addColorStop(1, "#00FFFF");
+    context.fillStyle = gradient;
+    context.fillRect(0,0,window.innerWidth,window.innerHeight);
+   }
  }
 }

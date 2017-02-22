@@ -6,10 +6,10 @@ function createScene(back){
  var width = window.innerWidth;var height = window.innerHeight;
  var string = canvas1+width+canvas2+height+canvas3;
  document.body.innerHTML += string;
- if(back==null||back==undefined){
+ if(back==null || back==undefined){
   setStyle("#000000");
  }else{
-  if(back=="normal"||back=="day"){
+  if(back=="normal" || back=="day"){
    setStyle("normal","medium");
   }
  }

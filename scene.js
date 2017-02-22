@@ -26,7 +26,7 @@ function setStyle(style,level){
     var canvas = document.getElementsByTagName("CANVAS")[0];
     var context = canvas.getContext("2d");
     var gradient = context.createLinearGradient(width,0,width,height);
-    gradient.addColorStop(0,"#00BBFF");gradient.addColorStop(1, "#00FFFF");
+    gradient.addColorStop(0,"#00AAFF");gradient.addColorStop(1, "#00FFFF");
     context.fillStyle = gradient;
     context.fillRect(0,0,window.innerWidth,window.innerHeight);
    }

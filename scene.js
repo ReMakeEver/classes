@@ -9,7 +9,7 @@ function createScene(back){
  if(back==null||back==undefined){
   setStyle("#000000");
  }else{
-  if(back=="normal"){
+  if(back=="normal"||back=="day"){
    setStyle("normal","medium");
   }
  }

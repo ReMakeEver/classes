@@ -43,7 +43,7 @@ function setStyle(style,level,speed){
    var context = canvas.getContext("2d");
    context.fillStyle = "#FFFF00";context.strokeStyle = "#FFFF00";
    context.beginPath();
-   context.arc(width,50,50,0,2*Math.PI);
+   context.arc(width,50,width/2,0,2*Math.PI);
    context.stroke();context.fill();
   }else{
    if(style=="normal" && level=="high"){

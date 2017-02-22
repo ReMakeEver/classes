@@ -11,10 +11,10 @@ function createScene(back,level,speed){
  var width = window.innerWidth;var height = window.innerHeight;
  var string = canvas1+width+canvas2+height+canvas3;
  document.body.innerHTML += string;
- if(back==null || back==undefined && level==undefined || level==null){
+ if(back==null || back==undefined){
   setStyle("#000000");
  }else{
-  if(back=="normal" || back=="day" && level==null || level==undefined){
+  if(back=="normal" || back=="day"){
    setStyle("normal","medium");
   }else{
    if(back=="normal" && level=="animate"){

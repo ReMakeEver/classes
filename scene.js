@@ -1,6 +1,7 @@
 var SCENE = {
  "NewScene": function(back){createScene(back);},
- "setStyle": function(type){setSceneBack(type);}
+ "setStyle": function(type){setSceneBack(type);},
+ "addSun": function(type){setSceneSun(type);}
 };
 function createScene(back){
  var canvas1 = '<canvas width="';var canvas2 = '" height="';var canvas3 = '"></canvas>';
@@ -27,5 +28,18 @@ function setSceneBack(type){
   gradient.addColorStop(0, "#0088FF");gradient.addColorStop(1, "#FF8800");
   context.fillStyle = gradient;
   context.fillRect(0,0,window.innerWidth,window.innerHeight);
+  SCENE.addSun("normal");
+ }
+}
+function setSceneSun(type){
+ var sType = type.split(",");
+ if(sType[0]=="normal"){
+  var canvas = document.getElementByTagName("CANVAS")[0];
+  var width1 = window.innerWidth/2;var width2 = window.innerWidth/4;
+  var context = canvas.getContext("2d");
+  context.beginPath();
+  context.arc(width1,width2,width2,0,2*Math.PI);
+  context.strokeStyle = "#FFFF00";context.fillStyle = "#FFFF00";
+  context.stroke();
  }
 }

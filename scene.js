@@ -12,7 +12,7 @@ function createScene(back){
  }
 }
 function setSceneBack(type){
- if(type[0]=="none"){
+ if(type=="none"){
   var canvas = document.getElementsByTagName("CANVAS")[0];
   var width = window.innerWidth;var height = window.innerHeight;
   var context = canvas.getContext("2d");

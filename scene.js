@@ -1,6 +1,6 @@
 var SCENE = {
  "NewScene": function(back){createScene(back);},
- "setStyle": function(type){setSceneBack([type]);}
+ "setStyle": function(type){setSceneBack(type);}
 };
 function createScene(back){
  var canvas1 = '<canvas width="';var canvas2 = '" height="';var canvas3 = '"></canvas>';
@@ -12,7 +12,8 @@ function createScene(back){
  }
 }
 function setSceneBack(type){
- if(type[0]=="none"){
+ var bType = type.split(",");
+ if(bType[0]=="none"){
   var canvas = document.getElementsByTagName("CANVAS")[0];
   var width = window.innerWidth;var height = window.innerHeight;
   var context = canvas.getContext("2d");

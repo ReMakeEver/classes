@@ -41,6 +41,6 @@ function setSceneSun(type){
   context.beginPath();
   context.arc(width1,height,width2,0,2*Math.PI);
   context.strokeStyle = "#FFFF00";context.fillStyle = "#FFFF00";
-  context.stroke();
+  context.stroke();context.fill();
  }
 }

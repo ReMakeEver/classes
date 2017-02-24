@@ -3,7 +3,7 @@ var SCENE = {
  "setStyle": function(type){setSceneBack(type);}
 };
 function createScene(back){
- var canvas1 = '<canvas width="';var canvas2 = '" height="';var canvas3 = '"></canvas>
+ var canvas1 = '<canvas width="';var canvas2 = '" height="';var canvas3 = '"></canvas>';
  var width = window.innerWidth;var height = window.innerHeight;
  var string = canvas1+width+canvas2+height+canvas3;
  document.body.innerHTML += string;

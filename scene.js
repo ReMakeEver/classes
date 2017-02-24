@@ -8,11 +8,11 @@ function createScene(back){
  var string = canvas1+width+canvas2+height+canvas3;
  document.body.innerHTML += string;
  if(back==null || back==undefined){
-  SCENE.setStyle("none");
+  SCENE.setStyle({"none"});
  }
 }
 function setSceneBack(type){
- if(type=="none"){
+ if(type[0]=="none"){
   var canvas = document.getElementsByTagName("CANVAS")[0];
   var width = window.innerWidth;var height = window.innerHeight;
   var context = canvas.getContext("2d");

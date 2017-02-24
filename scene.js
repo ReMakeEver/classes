@@ -7,7 +7,7 @@ function createScene(back){
  var width = window.innerWidth;var height = window.innerHeight;
  var string = canvas1+width+canvas2+height+canvas3;
  document.body.innerHTML += string;
- if(back[0]==null || back[0]==undefined){
+ if(back==null || back==undefined){
   SCENE.setStyle("none");
  }
 }

@@ -7,8 +7,8 @@ function createScene(back){
  var width = window.innerWidth;var height = window.innerHeight;
  var string = canvas1+width+canvas2+height+canvas3;
  document.body.innerHTML += string;
- if(back==null || back==undefined){
-  SCENE.setStyle("none");
+ if(back==null || back==undefined){SCENE.setStyle("none");}else{
+  if(back=="normal"){SCENE.setStyle("normal");}
  }
 }
 function setSceneBack(type){
@@ -18,5 +18,14 @@ function setSceneBack(type){
   var width = window.innerWidth;var height = window.innerHeight;
   var context = canvas.getContext("2d");
   context.fillStyle = "#000000";context.fillRect(0,0,width,height);
+ }
+ if(bType[0]=="normal"){
+  var canvas = document.getElementsByTagName("CANVAS")[0];
+  var width = window.innerWidth/2;var height = window.innerHeight+10;
+  var context = canvas.getContext("2d");
+  var gradient =  context.createLinearGradient(width,0,width,height);
+  gradient.addColorStop(0, "#0088FF");gradient.addColorStop(1, "#FF8800");
+  context.fillStyle = gradient;
+  context.fillRect(0,0,window.innerWidth,window.innerHeight);
  }
 }

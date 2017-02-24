@@ -35,10 +35,11 @@ function setSceneSun(type){
  var sType = type.split(",");
  if(sType[0]=="normal"){
   var canvas = document.getElementsByTagName("CANVAS")[0];
-  var width1 = window.innerWidth/2;var width2 = window.innerWidth/4;
+  var width1 = window.innerWidth/2;var width2 = window.innerWidth/8;
+  var height = window.innerHeight/4;
   var context = canvas.getContext("2d");
   context.beginPath();
-  context.arc(width1,width2,width2,0,2*Math.PI);
+  context.arc(width1,height,width2,0,2*Math.PI);
   context.strokeStyle = "#FFFF00";context.fillStyle = "#FFFF00";
   context.stroke();
  }

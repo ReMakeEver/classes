@@ -34,7 +34,7 @@ function setSceneBack(type){
 function setSceneSun(type){
  var sType = type.split(",");
  if(sType[0]=="normal"){
-  var canvas = document.getElementByTagName("CANVAS")[0];
+  var canvas = document.getElementsByTagName("CANVAS")[0];
   var width1 = window.innerWidth/2;var width2 = window.innerWidth/4;
   var context = canvas.getContext("2d");
   context.beginPath();

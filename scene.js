@@ -38,7 +38,7 @@ function setSceneSun(type){
   var width1 = window.innerWidth/2;var width2 = window.innerWidth/8;
   var context = canvas.getContext("2d");
   context.beginPath();
-  context.arc(width1,width2,width2,0,2*Math.PI);
+  context.arc(width1,width2,width2/2,0,2*Math.PI);
   context.strokeStyle = "#FFFF00";context.fillStyle = "#FFFF00";
   context.stroke();context.fill();
  }

@@ -35,18 +35,18 @@ function decryptString(string,level){
  }else{
   if(level==2){
    for(var i = 0;i<split.length;i++){
-    data += String.fromCharCode(split[i])+",";
+    data += String.fromCharCode(split[i]);
    }
    return level2De(data);
   }
  }
  return data;
 }
- function level2De(string){
-  var split = string.split(",");
-  var data = "";
-  for(var i = 0;i<split.length;i++){
-   data += String.fromCharCode(split[i]);
-  }
-  return data;
+function level2De(string){
+ var split = string.split(",");
+ var data = "";
+ for(var i = 0;i<split.length;i++){
+  data += String.fromCharCode(split[i]);
  }
+ return data;
+}

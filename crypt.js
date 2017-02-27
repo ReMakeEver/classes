@@ -14,10 +14,15 @@ function encryptString(string,times){
    for(var i = 0;i<string.length;i++){
     string2 += string.charCodeAt(i);
    }
-   for(var i = 0;i<string2.length;i++){
-    data += string2.charCodeAt(i);
-   }
+   return level2En(string2);
   }
+ }
+ return data;
+}
+function level2En(string){
+ var data = "";
+ for(var i = 0;i<string.length;i++){
+  data += string.charCodeAt(i);
  }
  return data;
 }

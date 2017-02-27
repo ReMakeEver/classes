@@ -27,4 +27,10 @@ function level2En(string){
  return data;
 }
 function decryptString(string){
+ var split = string.split(",");
+ var data = "";
+ for(var i = 0;i<split.length;i++){
+  data += String.fromCharCode(split[i]);
+ }
+ return data;
 }

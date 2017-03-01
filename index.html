@@ -19,10 +19,13 @@
     <input type="text" value="Full Name" onfocus="value=''" id="in1" />
     <input type="text" value="E-Mail" onfocus="value=''" id="in2" />
     <input type="text" value="Password" onfocus="value=''" id="in3"/>
-    <input type="button" value="Register" onclick="register" />
+    <input type="button" value="Register" onclick="register()" />
    </div>
    <script type="text/javascript">
-    
+    var i1 = document.getElementById("in1");var i2 = document.getElementById("in2");var i3 = document.getElementById("in3");
+    function register(i1.value,i2.value,i3.value){
+     firebase.auth.createUserWithEmailAndPassword(email, password);
+    }
    </script>
   </body>
   </html>

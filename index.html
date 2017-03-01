@@ -27,6 +27,7 @@
      firebase.auth.createUserWithEmailAndPassword(email, password).catch(function(error){
       var errorCode = error.code;
       var errorMessage = error.code;
+      window.alert(errorCode+" error has occured. With console error:"+errorMessage);
      }
     }
    </script>
